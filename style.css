@@ -1,0 +1,227 @@
+/* This changes the whole page */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fbfada;
+    color: #333332;
+}
+
+/* Top navigation bar */
+.navbar {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Links inside navbar */
+.navbar a {
+    text-decoration: none;
+    color: #333332;
+    font-weight: 500;
+}
+
+/* When mouse touches link */
+.navbar a:hover {
+    color: #436850;
+}
+
+/* Big title */
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #436850;
+}
+
+/* Section cards */
+.section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 70%;
+}
+
+/* Smaller titles */
+h2 {
+    color: #12372a;
+}
+
+/* Smooth hover effect */
+.section:hover {
+    transform: scale(1.01);
+}
+
+/* Resume row (one line of experience) */
+.resume-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Left side (date) */
+.resume-date {
+    width: 150px;
+    font-weight: bold;
+    color: #666665;
+}
+
+/* Right side (content) */
+.resume-content {
+    flex: 1;
+}
+
+body {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.resume-date {
+    font-size: 14px;
+}
+
+.resume-content {
+    font-size: 14px;
+}
+
+.resume-content p {
+    margin: 8px 0;
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+/* First level list */
+ul {
+    margin: 10px 0 10px 18px;
+    padding: 0;
+}
+
+/* Second level list */
+ul ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* Spacing between items */
+li {
+    margin-bottom: 8px;
+}
+
+/* Dropdown box */
+details {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Clickable title */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #436850;
+}
+
+summary {
+    list-style: none; /* removes default arrow */
+}
+
+summary::-webkit-details-marker {
+    display: none; /* removes default arrow (Chrome/Safari) */
+}
+
+/* Add custom arrow */
+summary::before {
+    content: "▶";
+    font-size: 10px;
+    display: inline-block;
+    transform: translateY(+3px);
+}
+
+details[open] summary::before {
+    content: "▼";
+}
+
+summary {
+    display: flex;
+    align-items: flex-start; /* important: aligns top instead of center */
+    gap: 8px;
+}
+
+/* Stack text vertically */
+.summary-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove default spacing */
+.summary-text h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.summary-text p {
+    margin: 5px 0;
+}
+
+.summary-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+summary:hover {
+    color: #12372a;
+}
+
+.resume-item details {
+    padding: 0;
+}
+
+details > *:not(summary) {
+    padding: 10px 0 0 15px;
+}
+
+/* Each row */
+.skill-item {
+    display: flex;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Left column (skill) */
+.skill-name {
+    width: 200px;
+    font-weight: 600;
+}
+
+/* Right column (tools) */
+.skill-tools {
+    flex: 1;
+    color: #666;
+    line-height: 1.5;
+}
+
+.tool {
+    background-color: #f0edff;
+    color: #436850;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-right: 6px;
+    font-size: 14px;
+}
