@@ -8,32 +8,42 @@ body {
 }
 
 /* Navigation bar */
+/* Navigation bar */
 .navbar {
     background-color: #fbfada;
-    padding: 15px;
+    padding: 14px 24px;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+/* Links inside navbar */
 .navbar a {
     text-decoration: none;
     color: #333332;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
+/* Hover state */
 .navbar a:hover {
-    color: #436850;
+    color: #12372a;
+    background-color: #e7ecd9;
 }
 
+/* Active page */
 .navbar a.active {
     color: #12372a;
     font-weight: 700;
-    background-color: #dde5d3;
-    padding: 6px 12px;
-    border-radius: 999px;
+    background-color: #d7e3cf;
 }
 
 /* Main title */
