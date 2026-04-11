@@ -2,13 +2,13 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #b3d693;
+    background-color: #adbc9f;
     color: #333332;
 }
 
 /* Top navigation bar */
 .navbar {
-    background-color: white;
+    background-color: #fbfada;
     padding: 15px;
     display: flex;
     justify-content: center;
