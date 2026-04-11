@@ -28,6 +28,14 @@ body {
     color: #436850;
 }
 
+.navbar a.active {
+    color: #12372a;
+    font-weight: 700;
+    background-color: #dde5d3;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
 /* Main title */
 h1 {
     font-family: 'Playfair Display', serif;
