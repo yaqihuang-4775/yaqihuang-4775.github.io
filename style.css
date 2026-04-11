@@ -59,35 +59,45 @@ h1 {
 /* Resume top header block */
 .resume-header {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 45px;
+    padding: 0 20px;
 }
 
 .resume-header h1 {
-    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
 }
 
 .resume-name {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     color: #12372a;
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 }
 
 .resume-contact {
     font-size: 15px;
     color: #5f665c;
-    margin: 0 0 24px 0;
-    line-height: 1.6;
+    margin: 0 0 28px 0;
+    line-height: 1.8;
 }
 
 .resume-contact a {
     color: #436850;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .resume-contact a:hover {
+    color: #12372a;
     text-decoration: underline;
+}
+
+.contact-divider {
+    color: #7b8577;
+    margin: 0 6px;
 }
 
 /* Buttons under contact info */
@@ -100,18 +110,35 @@ h1 {
 
 .resume-button {
     display: inline-block;
-    padding: 10px 18px;
+    padding: 11px 20px;
     border: 1.5px solid #12372a;
     border-radius: 999px;
     text-decoration: none;
     color: #12372a;
     background-color: #fbfada;
     font-weight: 600;
+    font-size: 14px;
     transition: all 0.2s ease;
 }
 
 .resume-button:hover {
     background-color: #d7e3cf;
+    transform: translateY(-1px);
+}
+
+.resume-button-secondary {
+    background-color: transparent;
+}
+
+.resume-button-secondary:hover {
+    background-color: #e7ecd9;
+}
+
+.resume-divider {
+    width: 70%;
+    height: 1px;
+    background-color: #d6decf;
+    margin: 0 auto 30px auto;
 }
 
 /* Section titles */
