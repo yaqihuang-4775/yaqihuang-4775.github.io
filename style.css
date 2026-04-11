@@ -37,7 +37,7 @@ h1 {
 
 /* Section cards */
 .section {
-    background-color: white;
+    background-color: #fbfada;
     margin: 30px auto;
     padding: 30px;
     border-radius: 12px;
@@ -124,7 +124,7 @@ li {
 
 /* Dropdown box */
 details {
-    background-color: white;
+    background-color: #fbfada;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
