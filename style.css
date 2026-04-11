@@ -56,6 +56,64 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Resume top header block */
+.resume-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.resume-header h1 {
+    margin-bottom: 12px;
+}
+
+.resume-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #12372a;
+    margin: 0 0 10px 0;
+}
+
+.resume-contact {
+    font-size: 15px;
+    color: #5f665c;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+}
+
+.resume-contact a {
+    color: #436850;
+    text-decoration: none;
+}
+
+.resume-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons under contact info */
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1.5px solid #12372a;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #12372a;
+    background-color: #fbfada;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.resume-button:hover {
+    background-color: #d7e3cf;
+}
+
 /* Section titles */
 h2 {
     font-size: 26px;
