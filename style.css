@@ -316,8 +316,8 @@ details > *:not(summary) {
 
 
 /* =========================
-   RESUME PAGE — NEW UI STYLE
-   Paste this at the VERY END of style.css
+   RESUME PAGE — REFINED UI STYLE
+   Replace the current final resume override block with this
    ========================= */
 
 /* Page base */
@@ -381,19 +381,19 @@ body {
 .resume-header {
     text-align: center;
     max-width: 980px;
-    margin: 72px auto 36px auto;
+    margin: 88px auto 42px auto;
     padding: 0 28px;
 }
 
 .resume-header h1 {
     text-align: center;
-    margin: 0 0 28px 0;
+    margin: 0 0 34px 0;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 56px;
-    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-size: 64px;
+    line-height: 1.02;
     color: #3a4d24;
 }
 
@@ -404,18 +404,18 @@ body {
 }
 
 .resume-name {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #88b04b;
-    margin: 0 0 16px 0;
+    margin: 0 0 18px 0;
 }
 
 .resume-contact {
     font-size: 15px;
     color: #7b7468;
-    margin: 0 0 26px 0;
+    margin: 0 0 28px 0;
     line-height: 1.9;
     max-width: 760px;
     margin-left: auto;
@@ -436,49 +436,48 @@ body {
 }
 
 .contact-divider {
-    color: #b2b9a7;
+    color: #b8beb0;
     margin: 0 10px;
 }
 
 /* Buttons */
 .resume-buttons {
-    justify-content: flex-start;
-    gap: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 22px;
 }
 
 .resume-button {
-    padding: 12px 20px;
-    border: 1px solid rgba(136, 176, 75, 0.28);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    padding: 12px 22px;
+    border: 1px solid rgba(136, 176, 75, 0.24);
     border-radius: 999px;
     text-decoration: none;
     color: #3a4d24;
-    background-color: #dce7d1;
+    background: #dfe9d4;
     font-weight: 600;
     font-size: 14px;
-    box-shadow: 0 8px 20px rgba(136, 176, 75, 0.08);
+    box-shadow: 0 8px 22px rgba(136, 176, 75, 0.08);
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.resume-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-}
-
 .resume-button:hover {
-    background-color: #cfdcbf;
+    background: #d3e1c3;
     transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(136, 176, 75, 0.12);
+    box-shadow: 0 12px 26px rgba(136, 176, 75, 0.12);
 }
 
 .resume-button-secondary {
-    background-color: #ffffff;
+    background: #ffffff;
 }
 
 .resume-button-secondary:hover {
-    background-color: #f4f8ee;
+    background: #f4f8ee;
 }
 
 /* Divider */
@@ -486,17 +485,17 @@ body {
     width: min(980px, calc(100% - 56px));
     height: 1px;
     background-color: rgba(0, 0, 0, 0.06);
-    margin: 0 auto 28px auto;
+    margin: 0 auto 30px auto;
 }
 
 /* Section blocks */
 .section {
     width: min(980px, calc(100% - 56px));
-    margin: 0 auto 22px auto;
-    padding: 34px 34px 28px 34px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 28px;
+    margin: 0 auto 24px auto;
+    padding: 36px 36px 30px 36px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(0, 0, 0, 0.045);
+    border-radius: 30px;
     box-shadow: 0 10px 30px rgba(30, 30, 30, 0.04);
     transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -569,20 +568,20 @@ h3 {
 
 .resume-content p {
     margin: 8px 0;
-    line-height: 1.75;
+    line-height: 1.72;
 }
 
 .resume-content em {
     color: #7b7468;
 }
 
-.resume-content details > br + p {
-    margin-top: 0;
-    margin-bottom: 0.15rem;
+/* tighter date + subtitle spacing inside dropdown content */
+.resume-content details > p {
+    margin: 0;
 }
 
 .resume-content details > p + p {
-    margin-top: 0.1rem;   /* 日期和下面的小 heading 更贴近 */
+    margin-top: 2px;
 }
 
 .resume-content details p {
@@ -645,20 +644,20 @@ details[open] summary::before {
 }
 
 .summary-text h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 6px 0;
     font-size: 24px;
 }
 
 .summary-text p {
-    margin: 3px 0;
+    margin: 2px 0;
     font-size: 14px;
     color: #7b7468;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 /* Dropdown content */
 details > *:not(summary) {
-    padding: 16px 0 0 22px;
+    padding: 14px 0 0 22px;
 }
 
 /* Lists */
@@ -734,12 +733,14 @@ li::marker {
 /* Mobile */
 @media (max-width: 768px) {
     .resume-header {
-        margin-top: 52px;
+        margin-top: 56px;
+        margin-bottom: 34px;
         padding: 0 20px;
     }
 
     .resume-header h1 {
-        font-size: 42px;
+        font-size: 46px;
+        margin-bottom: 26px;
     }
 
     .resume-contact {
