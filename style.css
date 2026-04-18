@@ -381,7 +381,7 @@ body {
 .resume-header {
     text-align: left;
     max-width: 980px;
-    margin: 72px auto 56px auto;
+    margin: 72px auto 36px auto;
     padding: 0 28px;
 }
 
@@ -395,6 +395,20 @@ body {
     font-size: 56px;
     line-height: 1.05;
     color: #3a4d24;
+}
+
+.resume-header h1 {
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #1f3b2f;
+    margin: 0 0 1.7rem 0; /* 原本这里偏小，现在加大 */
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 3.25rem; /* 拉开整个 header 和下面内容的距离 */
 }
 
 .resume-name {
@@ -560,6 +574,23 @@ h3 {
     color: #7b7468;
 }
 
+.resume-content details > br + p {
+    margin-top: 0;
+    margin-bottom: 0.15rem;
+}
+
+.resume-content details > p + p {
+    margin-top: 0.1rem;   /* 日期和下面的小 heading 更贴近 */
+}
+
+.resume-content details p {
+    line-height: 1.45;
+}
+
+.resume-content details ul {
+    margin-top: 0.55rem;
+}
+
 /* Details / dropdown */
 details {
     background: transparent;
@@ -617,7 +648,7 @@ details[open] summary::before {
 }
 
 .summary-text p {
-    margin: 1px 0;
+    margin: 3px 0;
     font-size: 14px;
     color: #7b7468;
     line-height: 1.6;
