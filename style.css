@@ -379,7 +379,7 @@ body {
 
 /* Main title area */
 .resume-header {
-    text-align: center;
+    text-align: left;
     max-width: 980px;
     margin: 72px auto 36px auto;
     padding: 0 28px;
