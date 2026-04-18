@@ -378,6 +378,7 @@ body {
 }
 
 /* Main title area */
+/* Main title area */
 .resume-header {
     text-align: left;
     max-width: 980px;
@@ -387,7 +388,7 @@ body {
 
 .resume-header h1 {
     text-align: left;
-    margin: 0 0 32px 0;
+    margin: 0 0 34px 0;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
@@ -395,6 +396,12 @@ body {
     font-size: 56px;
     line-height: 1.05;
     color: #3a4d24;
+}
+
+.resume-header .resume-name,
+.resume-header .resume-contact,
+.resume-header .resume-actions {
+    text-align: center;
 }
 
 .resume-name {
@@ -412,6 +419,8 @@ body {
     margin: 0 0 26px 0;
     line-height: 1.9;
     max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resume-contact a {
@@ -425,6 +434,13 @@ body {
     color: #3a4d24;
     border-bottom-color: rgba(58, 77, 36, 0.35);
     text-decoration: none;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .contact-divider {
