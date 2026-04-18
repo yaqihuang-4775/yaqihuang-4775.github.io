@@ -397,20 +397,6 @@ body {
     color: #3a4d24;
 }
 
-.resume-header h1 {
-    font-size: clamp(2.8rem, 7vw, 4.8rem);
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: #1f3b2f;
-    margin: 0 0 1.7rem 0; /* 原本这里偏小，现在加大 */
-}
-
-.resume-header {
-    text-align: center;
-    margin-bottom: 3.25rem; /* 拉开整个 header 和下面内容的距离 */
-}
-
 .resume-name {
     font-size: 14px;
     font-weight: 700;
