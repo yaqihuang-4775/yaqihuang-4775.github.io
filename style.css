@@ -1183,7 +1183,7 @@ body.home-page .main-nav a.active::after {
   }
 
   .hero-content {
-    width: min(520px, calc(100% - 56px));
+    width: min(560px, calc(100% - 56px));
     margin-left: 28px;
     gap: 16px;
   }
@@ -1195,7 +1195,7 @@ body.home-page .main-nav a.active::after {
 
   .hero .subtitle,
   .hero h2 {
-    max-width: 9ch;
+    max-width: 16ch;
   }
 
   .orb-3 {
@@ -1247,7 +1247,7 @@ body.home-page .main-nav a.active::after {
   .hero .subtitle,
   .hero h2 {
     font-size: clamp(1.8rem, 9vw, 2.7rem);
-    max-width: 8ch;
+    max-width: 16ch;
   }
 
   .hero p,
@@ -1342,18 +1342,18 @@ body.home-page .main-nav a.active::after {
 .hero-content {
   position: relative;
   z-index: 5;
-  width: min(500px, calc(100% - 64px));
-  margin-left: clamp(28px, 6vw, 88px);
+  width: min(560px, calc(100% - 64px));
+  margin-left: clamp(32px, 6vw, 88px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
+  gap: 24px;
 }
 
 /* 右边 tagline */
 .hero-tagline-right {
   position: absolute;
-  right: clamp(28px, 7vw, 100px);
+  right: clamp(32px, 7vw, 100px);
   top: 52%;
   transform: translateY(-50%);
   z-index: 6;
@@ -1365,7 +1365,7 @@ body.home-page .main-nav a.active::after {
   font-style: italic;
   font-weight: 500;
   font-size: clamp(1.9rem, 3vw, 3.2rem);
-  line-height: 1.02;
+  line-height: 1.6;
   letter-spacing: -0.02em;
   color: #e4bea4;
   text-align: left;
@@ -1373,7 +1373,7 @@ body.home-page .main-nav a.active::after {
 
 /* 左边正文宽度稍微控制一下 */
 .hero-description {
-  max-width: 40ch;
+  max-width: 48ch;
 }
 
 /* 平板 */
@@ -1385,7 +1385,7 @@ body.home-page .main-nav a.active::after {
   }
 
   .hero-content {
-    width: min(460px, calc(100% - 56px));
+    width: min(480px, calc(100% - 56px));
   }
 }
 
@@ -1399,8 +1399,8 @@ body.home-page .main-nav a.active::after {
 
   .hero-content {
     width: calc(100% - 40px);
-    margin: 34px 20px 0;
-    gap: 14px;
+    margin: 32px 24px 0;
+    gap: 16px;
   }
 
   .hero-tagline-right {
@@ -1408,8 +1408,8 @@ body.home-page .main-nav a.active::after {
     top: auto;
     right: auto;
     transform: none;
-    margin: 18px 20px 0;
-    max-width: 18ch;
+    margin: 16px 24px 0;
+    max-width: 240px;
     font-size: clamp(1.8rem, 9vw, 2.7rem);
   }
 }
