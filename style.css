@@ -1060,7 +1060,7 @@ body.home-page .main-nav a.active::after {
   font-size: 0.82rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(213, 210, 181, 0.72);
+  color: #7a7266;
 }
 
 /* ---------- DECORATIVE LETTERS ---------- */
