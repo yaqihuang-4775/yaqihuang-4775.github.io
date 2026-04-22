@@ -1446,7 +1446,7 @@ body.home-page .main-nav a.active::after {
     right: auto;
     transform: none;
     margin: 18px 20px 0;
-    max-width: 8ch;
+    max-width: 18ch;
     font-size: clamp(1.8rem, 9vw, 2.7rem);
   }
 }
