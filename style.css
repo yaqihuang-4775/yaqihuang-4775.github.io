@@ -895,10 +895,8 @@ body.home-page .main-nav a.active::after {
   justify-content: flex-start;
   padding: 110px 0 48px;
   background:
-    radial-gradient(circle at 18% 38%, rgba(168, 196, 109, 0.34), transparent 22%),
-    radial-gradient(circle at 32% 72%, rgba(181, 129, 93, 0.24), transparent 18%),
-    radial-gradient(circle at 74% 44%, rgba(126, 145, 177, 0.34), transparent 24%),
-    linear-gradient(90deg, #08120d 0%, #0d1912 24%, #111d16 50%, #132018 72%, #0b140f 100%);
+        radial-gradient(circle at top left, rgba(226, 234, 207, 0.45), transparent 34%),
+        linear-gradient(180deg, #f7f5ef 0%, #f3f0e8 100%);
 }
 
 /* 细微竖向光带，增加 poster 感 */
@@ -909,8 +907,8 @@ body.home-page .main-nav a.active::after {
   background:
     repeating-linear-gradient(
       90deg,
-      rgba(255,255,255,0.045) 0px,
-      rgba(255,255,255,0.045) 1px,
+      rgba(226, 234, 207, 0.45) 0px,
+      rgba(226, 234, 207, 0.45) 1px,
       transparent 1px,
       transparent 56px
     );
@@ -925,8 +923,8 @@ body.home-page .main-nav a.active::after {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255, 248, 230, 0.06), transparent 24%),
-    radial-gradient(circle at 82% 24%, rgba(255, 248, 230, 0.04), transparent 22%);
+        radial-gradient(circle at top left, rgba(226, 234, 207, 0.45), transparent 34%),
+        linear-gradient(180deg, #f7f5ef 0%, #f3f0e8 100%);
   mix-blend-mode: screen;
   pointer-events: none;
   z-index: 1;
@@ -937,7 +935,7 @@ body.home-page .main-nav a.active::after {
   position: relative;
   z-index: 5;
   width: min(560px, calc(100% - 64px));
-  margin-left: clamp(28px, 6vw, 88px);
+  margin-left: clamp(28px, 0, 88px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -951,7 +949,7 @@ body.home-page .main-nav a.active::after {
   font-size: 0.82rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #d5d2b5;
+  color: #88b04b;
   opacity: 0.9;
 }
 
@@ -964,9 +962,10 @@ body.home-page .main-nav a.active::after {
   line-height: 0.88;
   letter-spacing: -0.045em;
   font-weight: 600;
-  color: #f3eee3;
+  color: #3a4d24;
   max-width: 6ch;
   text-wrap: balance;
+  text-align: left;
 }
 
 /* 副标题 */
@@ -980,7 +979,7 @@ body.home-page .main-nav a.active::after {
   font-size: clamp(1.65rem, 3.3vw, 3.1rem);
   line-height: 0.98;
   letter-spacing: -0.02em;
-  color: #e4bea4;
+  color: #8a6540;
   text-align: right;
 }
 
@@ -988,10 +987,10 @@ body.home-page .main-nav a.active::after {
 .hero p,
 .hero-description {
   margin: 4px 0 0;
-  max-width: 32ch;
+  max-width: 560px;
   font-size: clamp(1rem, 1.15vw, 1.1rem);
   line-height: 1.7;
-  color: rgba(245, 241, 232, 0.88);
+  color: #7a7266;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -1026,9 +1025,9 @@ body.home-page .main-nav a.active::after {
 .hero-buttons a:first-child,
 .cta-group a:first-child,
 .hero .btn-primary {
-  background: #c8d59a;
-  color: #20301f;
-  border: 1px solid #c8d59a;
+  background: rgba(221, 232, 203, 0.88);
+  color: #34461f;
+  border: 1px solid #bfd09e;
   box-shadow: 0 10px 30px rgba(116, 144, 66, 0.16);
 }
 
@@ -1036,15 +1035,15 @@ body.home-page .main-nav a.active::after {
 .cta-group a:first-child:hover,
 .hero .btn-primary:hover {
   transform: translateY(-2px);
-  background: #d4e2a5;
+  background: #dfe9cf;
 }
 
 .hero-buttons a:last-child,
 .cta-group a:last-child,
 .hero .btn-secondary {
   background: transparent;
-  color: #f3eee3;
-  border: 1px solid rgba(243, 238, 227, 0.34);
+  color: rgba(255, 255, 255, 0.42);
+  border: 1px solid #d9d0c5;
 }
 
 .hero-buttons a:last-child:hover,
@@ -1052,7 +1051,7 @@ body.home-page .main-nav a.active::after {
 .hero .btn-secondary:hover {
   transform: translateY(-2px);
   border-color: rgba(243, 238, 227, 0.72);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.75);
 }
 
 /* 底部细字 */
@@ -1070,7 +1069,7 @@ body.home-page .main-nav a.active::after {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   line-height: 1;
-  color: rgba(242, 236, 224, 0.12);
+  color: rgba(58, 77, 36, 0.08);
   pointer-events: none;
   z-index: 2;
   user-select: none;
@@ -1093,7 +1092,7 @@ body.home-page .main-nav a.active::after {
   position: absolute;
   border-radius: 50%;
   filter: blur(34px);
-  opacity: 0.95;
+  opacity: 0.78;
   pointer-events: none;
   z-index: 2;
   animation-timing-function: ease-in-out;
@@ -1105,8 +1104,8 @@ body.home-page .main-nav a.active::after {
   width: 360px;
   height: 360px;
   left: -90px;
-  top: 22%;
-  background: rgba(170, 196, 106, 0.56);
+  top: 8%;
+  background: rgba(195, 214, 150, 0.9);
   animation: floatOne 9s infinite;
 }
 
@@ -1115,7 +1114,7 @@ body.home-page .main-nav a.active::after {
   height: 300px;
   left: 18%;
   bottom: 12%;
-  background: rgba(182, 128, 94, 0.46);
+  background: rgba(188, 95, 78, 0.78);
   animation: floatTwo 8.5s infinite;
 }
 
@@ -1124,7 +1123,7 @@ body.home-page .main-nav a.active::after {
   height: 460px;
   right: 9%;
   top: 18%;
-  background: rgba(128, 149, 182, 0.58);
+  background: rgba(111, 128, 159, 0.8);
   animation: floatThree 10s infinite;
 }
 
@@ -1134,7 +1133,7 @@ body.home-page .main-nav a.active::after {
   height: 140px;
   right: 24%;
   bottom: 18%;
-  background: rgba(227, 201, 164, 0.18);
+  background: rgba(224, 212, 190, 0.92);
   filter: blur(24px);
   animation: floatFour 7s infinite;
 }
@@ -1177,40 +1176,6 @@ body.home-page .main-nav a.active::after {
   }
 }
 
-/* ---------- OPTIONAL SCROLL HINT ---------- */
-.scroll-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 22px;
-  transform: translateX(-50%);
-  z-index: 6;
-  font-size: 0.72rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: rgba(243, 238, 227, 0.55);
-}
-
-/* ---------- NEXT SECTION TRANSITION ---------- */
-.hero + section,
-.hero + .homepage-intro,
-.hero + .about-preview {
-  position: relative;
-  margin-top: 0;
-}
-
-.hero + section::before,
-.hero + .homepage-intro::before,
-.hero + .about-preview::before {
-  content: "";
-  position: absolute;
-  top: -48px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(8, 18, 13, 0), #f7f5ef 76%);
-  pointer-events: none;
-}
-
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1100px) {
   .hero {
@@ -1228,7 +1193,6 @@ body.home-page .main-nav a.active::after {
     font-size: clamp(4rem, 11vw, 6.2rem);
   }
 
-  .hero .hero-tagline,
   .hero .subtitle,
   .hero h2 {
     max-width: 9ch;
@@ -1280,7 +1244,6 @@ body.home-page .main-nav a.active::after {
     max-width: 5.2ch;
   }
 
-  .hero .hero-tagline,
   .hero .subtitle,
   .hero h2 {
     font-size: clamp(1.8rem, 9vw, 2.7rem);
@@ -1410,14 +1373,14 @@ body.home-page .main-nav a.active::after {
 
 /* 左边正文宽度稍微控制一下 */
 .hero-description {
-  max-width: 30ch;
+  max-width: 40ch;
 }
 
 /* 平板 */
 @media (max-width: 1000px) {
   .hero-tagline-right {
     right: 40px;
-    max-width: 260px;
+    max-width: 360px;
     font-size: clamp(1.6rem, 3vw, 2.4rem);
   }
 
@@ -1446,7 +1409,7 @@ body.home-page .main-nav a.active::after {
     right: auto;
     transform: none;
     margin: 18px 20px 0;
-    max-width: 8ch;
+    max-width: 18ch;
     font-size: clamp(1.8rem, 9vw, 2.7rem);
   }
 }
