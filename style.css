@@ -981,7 +981,7 @@ body.home-page .main-nav a.active::after {
   line-height: 0.98;
   letter-spacing: -0.02em;
   color: #e4bea4;
-  max-width: 8.5ch;
+  max-width: 18.5ch;
 }
 
 /* 正文 */
