@@ -1042,7 +1042,7 @@ body.home-page .main-nav a.active::after {
 .cta-group a:last-child,
 .hero .btn-secondary {
   background: transparent;
-  color: rgba(255, 255, 255, 0.42);
+  color: #34461f;
   border: 1px solid #d9d0c5;
 }
 
