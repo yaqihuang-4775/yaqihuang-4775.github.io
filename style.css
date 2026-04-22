@@ -1106,7 +1106,7 @@ body.home-page .main-nav a.active::after {
   left: -90px;
   top: 8%;
   background: rgba(195, 214, 150, 0.9);
-  animation: floatOne 9s infinite;
+  animation: floatOne 9s ease-in-out infinite alternate;
 }
 
 .orb-2 {
@@ -1115,7 +1115,7 @@ body.home-page .main-nav a.active::after {
   left: 18%;
   bottom: 12%;
   background: rgba(188, 95, 78, 0.78);
-  animation: floatTwo 8.5s infinite;
+  animation: floatTwo 8.5s ease-in-out infinite alternate;
 }
 
 .orb-3 {
@@ -1124,7 +1124,7 @@ body.home-page .main-nav a.active::after {
   right: 9%;
   top: 18%;
   background: rgba(111, 128, 159, 0.8);
-  animation: floatThree 10s infinite;
+  animation: floatThree 10s ease-in-out infinite alternate;
 }
 
 /* 可选：再加一个更小的光斑会更灵 */
@@ -1135,7 +1135,7 @@ body.home-page .main-nav a.active::after {
   bottom: 18%;
   background: rgba(224, 212, 190, 0.92);
   filter: blur(24px);
-  animation: floatFour 7s infinite;
+  animation: floatFour 7s ease-in-out infinite alternate;
 }
 
 @keyframes floatOne {
