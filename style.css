@@ -634,7 +634,7 @@ summary::-webkit-details-marker {
 }
 
 summary::before {
-    content: "▶";
+    content: "+";
     font-size: 10px;
     line-height: 1;
     margin-top: 10px;
@@ -644,7 +644,7 @@ summary::before {
 }
 
 details[open] summary::before {
-    content: "▼";
+    content: "-";
 }
 
 .summary-text {
@@ -811,255 +811,562 @@ li::marker {
 ========================= */
 
 /* Hero section */
-/* ===== HOME HERO POSTER VERSION ===== */
-body.home-page .hero-poster {
-    position: relative;
-    min-height: calc(100vh - var(--nav-h));
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(163, 181, 120, 0.18), transparent 22%),
-        radial-gradient(circle at 72% 30%, rgba(124, 141, 181, 0.20), transparent 24%),
-        radial-gradient(circle at 38% 72%, rgba(186, 132, 108, 0.16), transparent 20%),
-        linear-gradient(115deg, #0f1712 0%, #17231b 38%, #1d2a22 68%, #121a15 100%);
-    isolation: isolate;
-    padding-top: var(--nav-h);
+/* =========================
+   HOME HERO — FINAL POLISH
+   ========================= */
+
+/* 先确保首页没有被默认间距影响 */
+body.home-page {
+  margin: 0;
+  padding: 0;
+  background: #f7f5ef;
+  overflow-x: hidden;
 }
 
-body.home-page .hero-poster-bg {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
+/* ---------- NAVBAR ---------- */
+body.home-page .main-nav,
+body.home-page nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(247, 245, 239, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-body.home-page .blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(55px);
-    opacity: 0.82;
-    mix-blend-mode: screen;
-    animation: floatBlob 9s ease-in-out infinite alternate;
+body.home-page nav ul,
+body.home-page .main-nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-body.home-page .blob-1 {
-    width: 24rem;
-    height: 24rem;
-    background: rgba(170, 191, 118, 0.58);
-    left: -4rem;
-    top: 14%;
-    animation-delay: 0s;
+body.home-page nav a,
+body.home-page .main-nav a {
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #7b776d;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-body.home-page .blob-2 {
-    width: 27rem;
-    height: 27rem;
-    background: rgba(123, 139, 180, 0.58);
-    right: 8%;
-    top: 16%;
-    animation-delay: 1.5s;
+body.home-page nav a:hover,
+body.home-page .main-nav a:hover {
+  color: #7ea047;
 }
 
-body.home-page .blob-3 {
-    width: 22rem;
-    height: 22rem;
-    background: rgba(186, 132, 108, 0.50);
-    left: 18%;
-    bottom: -3rem;
-    animation-delay: 3s;
+body.home-page nav a.active,
+body.home-page .main-nav a.active {
+  color: #7ea047;
+  position: relative;
 }
 
-body.home-page .blob-4 {
-    width: 18rem;
-    height: 18rem;
-    background: rgba(245, 236, 223, 0.10);
-    right: -3rem;
-    bottom: 10%;
-    animation-delay: 4.5s;
+body.home-page nav a.active::after,
+body.home-page .main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background: #7ea047;
+  border-radius: 999px;
 }
 
-body.home-page .poster-letter {
-    position: absolute;
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    line-height: 0.85;
-    color: rgba(245, 240, 232, 0.10);
-    z-index: 0;
-    pointer-events: none;
+/* ---------- HERO WRAPPER ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 110px 0 48px;
+  background:
+    radial-gradient(circle at 18% 38%, rgba(168, 196, 109, 0.34), transparent 22%),
+    radial-gradient(circle at 32% 72%, rgba(181, 129, 93, 0.24), transparent 18%),
+    radial-gradient(circle at 74% 44%, rgba(126, 145, 177, 0.34), transparent 24%),
+    linear-gradient(90deg, #08120d 0%, #0d1912 24%, #111d16 50%, #132018 72%, #0b140f 100%);
 }
 
-body.home-page .poster-letter-y {
-    top: -1.4rem;
-    right: 2.5rem;
-    font-size: clamp(11rem, 19vw, 18rem);
+/* 细微竖向光带，增加 poster 感 */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.045) 0px,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px,
+      transparent 56px
+    );
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 1;
 }
 
-body.home-page .poster-letter-h {
-    bottom: -2rem;
-    left: 56%;
-    font-size: clamp(10rem, 16vw, 15rem);
+/* 柔和整体雾化层 */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 248, 230, 0.06), transparent 24%),
+    radial-gradient(circle at 82% 24%, rgba(255, 248, 230, 0.04), transparent 22%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
 }
 
-body.home-page .grain {
-    position: absolute;
-    inset: 0;
-    opacity: 0.08;
-    background-image:
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 6px 6px, 6px 6px;
-    mix-blend-mode: soft-light;
-    z-index: 0;
+/* ---------- HERO CONTENT ---------- */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: min(560px, calc(100% - 64px));
+  margin-left: clamp(28px, 6vw, 88px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
 }
 
-body.home-page .hero-poster-content {
-    position: relative;
-    z-index: 2;
-    width: min(92vw, 1280px);
-    margin: 0 auto;
-    padding: 2.2rem 2.5rem 2.5rem;
-    display: grid;
-    grid-template-columns: minmax(320px, 560px);
-    row-gap: 1.1rem;
+/* 顶部小字 */
+.hero-kicker,
+.hero-label {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #d5d2b5;
+  opacity: 0.9;
 }
 
-body.home-page .hero-kicker {
-    margin: 0 0 0.35rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: #b8c98d;
+/* 主标题 */
+.hero h1,
+.hero-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(4.4rem, 10vw, 7.6rem);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+  color: #f3eee3;
+  max-width: 6ch;
+  text-wrap: balance;
 }
 
-body.home-page .hero-name {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(4.5rem, 10vw, 8.8rem);
-    line-height: 0.88;
-    letter-spacing: -0.05em;
-    color: #f4efe6;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+/* 副标题 */
+.hero .hero-tagline,
+.hero .subtitle,
+.hero h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.65rem, 3.3vw, 3.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: #e4bea4;
+  max-width: 8.5ch;
 }
 
-body.home-page .hero-tagline {
-    margin: 0.4rem 0 0;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: clamp(1.6rem, 3.4vw, 3.4rem);
-    line-height: 1.02;
-    color: #d8b49a;
-    max-width: 7.5ch;
+/* 正文 */
+.hero p,
+.hero-description {
+  margin: 4px 0 0;
+  max-width: 32ch;
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.7;
+  color: rgba(245, 241, 232, 0.88);
 }
 
-body.home-page .hero-description {
-    margin: 0.35rem 0 0;
-    max-width: 34rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(244, 239, 230, 0.86);
+/* ---------- BUTTONS ---------- */
+.hero-buttons,
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
 }
 
-body.home-page .hero-actions {
-    display: flex;
-    gap: 1rem;
+.hero-buttons a,
+.cta-group a,
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 185px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-buttons a:first-child,
+.cta-group a:first-child,
+.hero .btn-primary {
+  background: #c8d59a;
+  color: #20301f;
+  border: 1px solid #c8d59a;
+  box-shadow: 0 10px 30px rgba(116, 144, 66, 0.16);
+}
+
+.hero-buttons a:first-child:hover,
+.cta-group a:first-child:hover,
+.hero .btn-primary:hover {
+  transform: translateY(-2px);
+  background: #d4e2a5;
+}
+
+.hero-buttons a:last-child,
+.cta-group a:last-child,
+.hero .btn-secondary {
+  background: transparent;
+  color: #f3eee3;
+  border: 1px solid rgba(243, 238, 227, 0.34);
+}
+
+.hero-buttons a:last-child:hover,
+.cta-group a:last-child:hover,
+.hero .btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(243, 238, 227, 0.72);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* 底部细字 */
+.hero-meta {
+  margin-top: 2px;
+  font-size: 0.82rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(213, 210, 181, 0.72);
+}
+
+/* ---------- DECORATIVE LETTERS ---------- */
+.hero-mark {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(242, 236, 224, 0.12);
+  pointer-events: none;
+  z-index: 2;
+  user-select: none;
+}
+
+.hero-mark.mark-y {
+  top: 76px;
+  right: 5.5vw;
+  font-size: clamp(10rem, 18vw, 16rem);
+}
+
+.hero-mark.mark-h {
+  bottom: -14px;
+  right: 28vw;
+  font-size: clamp(8rem, 15vw, 13rem);
+}
+
+/* ---------- ORBS / GLOW SHAPES ---------- */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(34px);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.orb-1 {
+  width: 360px;
+  height: 360px;
+  left: -90px;
+  top: 22%;
+  background: rgba(170, 196, 106, 0.56);
+  animation: floatOne 9s infinite;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  left: 18%;
+  bottom: 12%;
+  background: rgba(182, 128, 94, 0.46);
+  animation: floatTwo 8.5s infinite;
+}
+
+.orb-3 {
+  width: 460px;
+  height: 460px;
+  right: 9%;
+  top: 18%;
+  background: rgba(128, 149, 182, 0.58);
+  animation: floatThree 10s infinite;
+}
+
+/* 可选：再加一个更小的光斑会更灵 */
+.orb-4 {
+  width: 140px;
+  height: 140px;
+  right: 24%;
+  bottom: 18%;
+  background: rgba(227, 201, 164, 0.18);
+  filter: blur(24px);
+  animation: floatFour 7s infinite;
+}
+
+@keyframes floatOne {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(40px, -28px) scale(1.08);
+  }
+}
+
+@keyframes floatTwo {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(26px, 22px) scale(1.12);
+  }
+}
+
+@keyframes floatThree {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-34px, 26px) scale(1.07);
+  }
+}
+
+@keyframes floatFour {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.18;
+  }
+  100% {
+    transform: translate(16px, -18px);
+    opacity: 0.28;
+  }
+}
+
+/* ---------- OPTIONAL SCROLL HINT ---------- */
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 6;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(243, 238, 227, 0.55);
+}
+
+/* ---------- NEXT SECTION TRANSITION ---------- */
+.hero + section,
+.hero + .homepage-intro,
+.hero + .about-preview {
+  position: relative;
+  margin-top: 0;
+}
+
+.hero + section::before,
+.hero + .homepage-intro::before,
+.hero + .about-preview::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(8, 18, 13, 0), #f7f5ef 76%);
+  pointer-events: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .hero {
+    padding: 108px 0 40px;
+  }
+
+  .hero-content {
+    width: min(520px, calc(100% - 56px));
+    margin-left: 28px;
+    gap: 16px;
+  }
+
+  .hero h1,
+  .hero-title {
+    font-size: clamp(4rem, 11vw, 6.2rem);
+  }
+
+  .hero .hero-tagline,
+  .hero .subtitle,
+  .hero h2 {
+    max-width: 9ch;
+  }
+
+  .orb-3 {
+    width: 380px;
+    height: 380px;
+    right: 2%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home-page .main-nav,
+  body.home-page nav {
+    height: 64px;
+  }
+
+  body.home-page nav ul,
+  body.home-page .main-nav ul {
+    gap: 16px;
     flex-wrap: wrap;
-    margin-top: 0.5rem;
-}
-
-body.home-page .hero-btn {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    min-width: 190px;
-    padding: 0.95rem 1.7rem;
-    border-radius: 999px;
-    font-weight: 600;
+    padding: 0 16px;
+  }
+
+  body.home-page nav a,
+  body.home-page .main-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 94px 0 32px;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: calc(100% - 40px);
+    margin: 34px 20px 0;
+    gap: 14px;
+  }
+
+  .hero h1,
+  .hero-title {
+    font-size: clamp(3.2rem, 18vw, 5.2rem);
+    max-width: 5.2ch;
+  }
+
+  .hero .hero-tagline,
+  .hero .subtitle,
+  .hero h2 {
+    font-size: clamp(1.8rem, 9vw, 2.7rem);
+    max-width: 8ch;
+  }
+
+  .hero p,
+  .hero-description {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .hero-buttons,
+  .cta-group {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-buttons a,
+  .cta-group a,
+  .hero .btn {
+    min-width: 0;
+    width: calc(50% - 6px);
+    padding: 14px 16px;
     font-size: 0.95rem;
-    text-decoration: none;
-    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .hero-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-mark.mark-y {
+    right: 2vw;
+    top: 92px;
+    font-size: 7rem;
+  }
+
+  .hero-mark.mark-h {
+    right: 10vw;
+    bottom: 18px;
+    font-size: 6rem;
+  }
+
+  .orb-1 {
+    width: 240px;
+    height: 240px;
+    left: -80px;
+    top: 24%;
+  }
+
+  .orb-2 {
+    width: 210px;
+    height: 210px;
+    left: 16%;
+    bottom: 18%;
+  }
+
+  .orb-3 {
+    width: 260px;
+    height: 260px;
+    right: -40px;
+    top: 18%;
+  }
+
+  .orb-4 {
+    display: none;
+  }
 }
 
-body.home-page .hero-btn:hover {
-    transform: translateY(-2px);
-}
+@media (max-width: 520px) {
+  .hero-buttons a,
+  .cta-group a,
+  .hero .btn {
+    width: 100%;
+  }
 
-body.home-page .hero-btn-primary {
-    background: #c7d5a4;
-    color: #182019;
-    border: 1px solid #c7d5a4;
-}
+  .hero-meta {
+    line-height: 1.6;
+    letter-spacing: 0.16em;
+  }
 
-body.home-page .hero-btn-secondary {
-    background: transparent;
-    color: #f4efe6;
-    border: 1px solid rgba(244, 239, 230, 0.35);
-}
-
-body.home-page .hero-side-note {
-    position: absolute;
-    left: 2rem;
-    bottom: 1.4rem;
-    z-index: 2;
-    font-size: 0.74rem;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: rgba(244, 239, 230, 0.52);
-}
-
-@keyframes floatBlob {
-    0% {
-        transform: translate3d(0, 0, 0) scale(1);
-    }
-    50% {
-        transform: translate3d(16px, -18px, 0) scale(1.06);
-    }
-    100% {
-        transform: translate3d(-14px, 14px, 0) scale(0.96);
-    }
-}
-
-@media (max-width: 900px) {
-    body.home-page .hero-poster {
-        min-height: auto;
-        padding-top: var(--nav-h);
-    }
-
-    body.home-page .hero-poster-content {
-        width: 100%;
-        padding: 2rem 1.4rem 5rem;
-        grid-template-columns: 1fr;
-    }
-
-    body.home-page .hero-name {
-        font-size: clamp(3.4rem, 18vw, 5.4rem);
-    }
-
-    body.home-page .hero-tagline {
-        max-width: 9ch;
-        font-size: clamp(1.45rem, 7vw, 2.4rem);
-    }
-
-    body.home-page .hero-description {
-        font-size: 1rem;
-        line-height: 1.75;
-    }
-
-    body.home-page .poster-letter-y,
-    body.home-page .poster-letter-h {
-        font-size: 7rem;
-    }
-
-    body.home-page .hero-side-note {
-        left: 1.4rem;
-        bottom: 1.2rem;
-        font-size: 0.68rem;
-    }
+  .hero-mark {
+    display: none;
+  }
 }
 
 /* Shared section heading */
