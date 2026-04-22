@@ -804,50 +804,53 @@ li::marker {
 /* Hero section */
 .home-hero {
     width: min(1180px, calc(100% - 56px));
-    margin: 72px auto 36px auto;
-    padding: 24px 0 12px 0;
+    margin: 82px auto 56px auto;
+    padding: 34px 0 12px 0;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 42px;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 46px;
     align-items: center;
 }
 
 .hero-text {
     max-width: 620px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-label {
-    margin: 0 0 16px 0;
+    margin: 0 0 18px 0;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #88b04b;
 }
 
 .home-hero h1 {
-    margin: 0 0 18px 0;
+    margin: 0 0 16px 0;
     font-family: 'Playfair Display', serif;
-    font-size: 82px;
-    line-height: 0.98;
+    font-size: clamp(4.4rem, 7vw, 6.6rem);
+    line-height: 0.93;
     font-weight: 500;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.045em;
     color: #3a4d24;
     text-align: left;
 }
 
 .home-hero h2 {
-    margin: 0 0 18px 0;
+    margin: 0 0 22px 0;
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+    line-height: 1.08;
     font-weight: 400;
     font-style: italic;
-    color: #5d5448;
+    color: #7a5e44;
+    max-width: 560px;
 }
 
 .hero-description {
-    margin: 0 0 28px 0;
+    margin: 0 0 34px 0;
     max-width: 560px;
     font-size: 16px;
     line-height: 1.9;
@@ -865,8 +868,8 @@ li::marker {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 158px;
-    padding: 13px 22px;
+    min-width: 168px;
+    padding: 14px 24px;
     border-radius: 999px;
     text-decoration: none;
     font-size: 14px;
@@ -875,87 +878,143 @@ li::marker {
 }
 
 .primary-button {
-    background: #e9efdd;
-    color: #3a4d24;
-    border: 1px solid #cad8b8;
-    box-shadow: 0 1px 2px rgba(58, 77, 36, 0.05);
+    background: #e5edd7;
+    color: #33461f;
+    border: 1px solid #c7d7b0;
+    box-shadow: 0 6px 16px rgba(58, 77, 36, 0.05);
 }
 
 .primary-button:hover {
-    background: #e0e9d0;
+    background: #dde8cb;
     border-color: #bcccab;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(58, 77, 36, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(58, 77, 36, 0.08);
 }
 
 .secondary-button {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.35);
     color: #5d5448;
     border: 1px solid #ddd4c9;
 }
 
 .secondary-button:hover {
-    background: #f4f1eb;
+    background: #f6f2eb;
     border-color: #cfc4b6;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(62, 52, 37, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(62, 52, 37, 0.05);
 }
 
 /* Hero visual side */
 .hero-art {
     position: relative;
-    min-height: 520px;
-    border-radius: 36px;
-    background: linear-gradient(135deg, #fbfaf7 0%, #f1eee7 100%);
+    min-height: 620px;
+    border-radius: 40px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.18)),
+        linear-gradient(145deg, #f6f4ee 0%, #ece7dd 100%);
     border: 1px solid rgba(58, 77, 36, 0.06);
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(62, 52, 37, 0.05);
+    box-shadow: 0 18px 38px rgba(62, 52, 37, 0.06);
 }
 
+/* oversized editorial letters */
+.hero-art::before {
+    content: "YH";
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 170px;
+    font-style: italic;
+    line-height: 1;
+    color: rgba(58, 77, 36, 0.08);
+    letter-spacing: -0.08em;
+    z-index: 0;
+}
+
+/* subtle inner frame / poster edge */
+.hero-art::after {
+    content: "";
+    position: absolute;
+    inset: 24px;
+    border: 1px solid rgba(58, 77, 36, 0.08);
+    border-radius: 28px;
+    pointer-events: none;
+}
+
+/* common block */
 .art-block {
     position: absolute;
-    border-radius: 28px;
+    border-radius: 34px;
+    z-index: 2;
+    box-shadow: 0 18px 30px rgba(62, 52, 37, 0.06);
 }
 
+/* tall sage poster-like slab */
 .art-block-1 {
-    width: 220px;
-    height: 300px;
-    top: 58px;
-    left: 70px;
-    background: linear-gradient(180deg, #dce8c9 0%, #b9caa0 100%);
-    transform: rotate(-10deg);
+    width: 235px;
+    height: 365px;
+    top: 82px;
+    left: 72px;
+    background: linear-gradient(180deg, #d8e3c0 0%, #bacb99 100%);
+    transform: rotate(-9deg);
 }
 
+/* warm beige block */
 .art-block-2 {
-    width: 250px;
-    height: 220px;
-    right: 56px;
-    bottom: 78px;
-    background: linear-gradient(180deg, #ddd2b8 0%, #c6b18e 100%);
+    width: 265px;
+    height: 230px;
+    right: 58px;
+    bottom: 74px;
+    background: linear-gradient(180deg, #ddcfb0 0%, #c8b089 100%);
     transform: rotate(10deg);
 }
 
+/* circle overlay */
 .art-circle {
     position: absolute;
-    width: 170px;
-    height: 170px;
+    width: 182px;
+    height: 182px;
     border-radius: 50%;
-    background: rgba(136, 176, 75, 0.16);
-    top: 130px;
-    right: 90px;
-    backdrop-filter: blur(4px);
+    background: rgba(190, 197, 153, 0.45);
+    top: 152px;
+    right: 92px;
+    z-index: 3;
+    backdrop-filter: blur(3px);
+}
+
+/* extra decorative shapes with pseudo layers feel */
+.hero-art .art-accent-line {
+    display: none;
 }
 
 .hero-side-text {
     position: absolute;
-    left: 36px;
-    bottom: 28px;
+    left: 34px;
+    bottom: 32px;
     margin: 0;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #7f8872;
+    color: #7e8970;
+    z-index: 4;
+}
+
+/* little editorial caption effect */
+.hero-side-text::before {
+    content: "Selected Works · Research · Design";
+    display: block;
+    margin-bottom: 8px;
+    color: #9b968c;
+    letter-spacing: 0.16em;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* a soft floating paper */
+.hero-art .floating-paper {
+    display: none;
 }
 
 /* Shared section heading */
