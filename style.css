@@ -887,8 +887,8 @@ body.home-page .main-nav a.active::after {
 /* ---------- HERO WRAPPER ---------- */
 .hero {
   position: relative;
-  min-height: 70vh;
-  height: 70svh;
+  min-height: 64vh;
+  height: 64svh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1443,7 +1443,7 @@ body.home-page .main-nav a.active::after {
     gap: 36px;
     align-items: start;
     position: relative;
-    margin-top: 40px;    
+    margin-top: 48px;    
 }
 
 .home-intro h2 {
