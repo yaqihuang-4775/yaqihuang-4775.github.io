@@ -887,8 +887,8 @@ body.home-page .main-nav a.active::after {
 /* ---------- HERO WRAPPER ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
-  height: 100svh;
+  min-height: 80vh;
+  height: 80svh;
   overflow: hidden;
   display: flex;
   align-items: center;
