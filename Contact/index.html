@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Yaqi Huang</title>
 
+    <!-- Connect CSS file -->
     <link rel="stylesheet" href="../style.css">
 
+    <!-- Import fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <!-- Navigation bar -->
@@ -15,55 +18,67 @@
         <a href="../index.html">Home</a>
         <a href="../About/index.html">About</a>
         <a href="../Resume/index.html">Resume</a>
-        <a href="../Research/index.html">Research</a>
         <a href="../Projects/index.html">Projects</a>
         <a href="../Contact/index.html" class="active">Contact</a>
     </div>
 
-    <section class="contact-page">
-        <div class="contact-glow contact-glow-1"></div>
-        <div class="contact-glow contact-glow-2"></div>
+    <!-- Header -->
+    <header class="contact-header">
+        <p class="contact-label">GET IN TOUCH</p>
+        <h1>Contact</h1>
+        <p class="contact-intro">
+            I’m always happy to connect about research, writing, design, creative collaboration,
+            or future opportunities.
+        </p>
+    </header>
 
-        <div class="contact-wrapper">
-            <div class="contact-intro">
-                <p class="contact-kicker">GET IN TOUCH</p>
-                <h1>Let’s connect.</h1>
-                <p class="contact-lead">
-                    I’m always happy to chat about research, writing, design, collaboration,
-                    or future opportunities. Feel free to reach out by email or connect with me online.
-                </p>
+    <div class="resume-divider"></div>
+
+    <!-- Main content -->
+    <main class="contact-page">
+        <section class="section contact-main-card">
+            <div class="contact-grid">
+
+                <!-- Left side -->
+                <div class="contact-left">
+                    <h2>Let’s connect</h2>
+                    <p>
+                        Whether you’d like to discuss academic work, creative projects, or potential collaborations,
+                        feel free to reach out. I’d love to hear from you.
+                    </p>
+
+                    <div class="contact-buttons">
+                        <a href="mailto:yaqihuang4775@gmail.com" class="resume-button">Email Me</a>
+                        <a href="../Assets/Resume_YaqiHuang.pdf" target="_blank" class="resume-button resume-button-secondary">View Resume</a>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="contact-right">
+                    <div class="contact-item">
+                        <p class="contact-item-label">Email</p>
+                        <a href="mailto:yaqihuang4775@gmail.com">yaqihuang4775@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <p class="contact-item-label">LinkedIn</p>
+                        <a href="https://www.linkedin.com/" target="_blank">Add your LinkedIn link here</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <p class="contact-item-label">Location</p>
+                        <p>Toronto, Ontario</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <p class="contact-item-label">Availability</p>
+                        <p>Open to research, academic, and creative opportunities.</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="contact-card">
-                <h2>Contact Information</h2>
-
-                <div class="contact-item">
-                    <span class="contact-label">Email</span>
-                    <a href="mailto:yaqihuang4775@gmail.com">yaqihuang4775@gmail.com</a>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-label">Phone</span>
-                    <a href="tel:+12899954908">(289) 995-4908</a>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-label">Location</span>
-                    <p>Toronto, ON</p>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-label">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/yaqi-huang-288281319/" target="_blank">View Profile</a>
-                </div>
-
-                <div class="contact-buttons">
-                    <a href="mailto:yaqihuang4775@gmail.com" class="contact-button primary">Email Me</a>
-                    <a href="../Assets/Resume_YaqiHuang.pdf" download class="contact-button secondary">Download Resume</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 </body>
 </html>
