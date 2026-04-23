@@ -1442,6 +1442,8 @@ body.home-page .main-nav a.active::after {
     grid-template-columns: 1fr 1fr;
     gap: 36px;
     align-items: start;
+    position: relative;
+    margin-top: 40px;    
 }
 
 .home-intro h2 {
