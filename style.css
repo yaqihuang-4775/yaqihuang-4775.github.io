@@ -893,7 +893,7 @@ body.home-page .main-nav a.active::after {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 96px 0 48px;
+  padding: 88px 0 48px;
   background:
         radial-gradient(circle at top left, rgba(226, 234, 207, 0.45), transparent 34%),
         linear-gradient(180deg, #f7f5ef 0%, #f3f0e8 100%);
