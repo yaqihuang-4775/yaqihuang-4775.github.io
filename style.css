@@ -2867,3 +2867,185 @@ body {
         top: 48px;
     }
 }
+
+
+
+/* =========================
+   PROJECT DETAIL PAGE — CLEANER LAYOUT FIX
+   Add this at the very end of style.css
+========================= */
+
+/* Make project detail sections feel lighter, not like giant boxes */
+.project-detail-page .section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 70px auto;
+    width: min(1080px, calc(100% - 56px));
+}
+
+.project-detail-page .section:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Overview: make it look like a designed editorial layout, not a boxed table */
+.project-overview-section {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 34px 0 !important;
+}
+
+.project-overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr);
+    gap: 54px;
+    align-items: start;
+}
+
+.project-overview-grid h2 {
+    margin-bottom: 18px;
+}
+
+.project-overview-grid p {
+    max-width: 680px;
+    margin: 0;
+}
+
+/* Right info column: remove heavy box feeling */
+.project-meta-card {
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    padding: 4px 0 4px 28px;
+    box-shadow: none;
+}
+
+.project-meta-card p {
+    margin: 0 0 24px 0;
+}
+
+.project-meta-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Gallery section: no giant outer rectangle */
+.project-gallery-section {
+    padding-top: 0 !important;
+}
+
+/* Gallery title spacing */
+.project-gallery-section h2 {
+    margin-bottom: 28px;
+}
+
+/* Carousel should feel like a display area, not an empty box */
+.project-carousel-wrapper {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    gap: 18px;
+    align-items: center;
+}
+
+/* Main image area */
+.project-carousel-main {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image itself gets the elegant frame */
+.project-carousel-main img {
+    width: auto;
+    max-width: 100%;
+    max-height: 76vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 24px;
+    background: #f7f8f3;
+    box-shadow: 0 18px 44px rgba(30, 30, 30, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.045);
+}
+
+/* Softer arrow buttons */
+.carousel-arrow {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    background: rgba(223, 233, 212, 0.85);
+    box-shadow: 0 8px 22px rgba(30, 30, 30, 0.06);
+}
+
+/* Caption spacing */
+.carousel-meta {
+    width: min(760px, 100%);
+    margin: 20px auto 18px auto;
+}
+
+/* Thumbnails: more gallery-like */
+.carousel-thumbnails {
+    margin-top: 8px;
+}
+
+.carousel-thumb {
+    width: 82px;
+    height: 104px;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.carousel-thumb img {
+    object-fit: cover;
+}
+
+/* Design focus section: restore card style only here */
+.project-process-section {
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(0, 0, 0, 0.045) !important;
+    border-radius: 28px !important;
+    box-shadow: 0 10px 30px rgba(30, 30, 30, 0.04) !important;
+    padding: 34px 36px !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-detail-page .section {
+        width: calc(100% - 32px);
+        margin: 50px auto;
+    }
+
+    .project-overview-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .project-meta-card {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 24px 0 0 0;
+    }
+
+    .project-carousel-wrapper {
+        grid-template-columns: 40px minmax(0, 1fr) 40px;
+        gap: 10px;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .project-carousel-main img {
+        max-height: 68vh;
+        border-radius: 18px;
+    }
+}
