@@ -3317,3 +3317,85 @@ body {
 .gallery-note {
     padding-top: 56px !important;
 }
+
+
+/* =========================
+   FIX: Gallery intro alignment
+   Keep Project Gallery + Pages aligned with Overview grid
+========================= */
+
+.project-gallery-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 38px;
+}
+
+.project-gallery-copy {
+    max-width: 720px;
+}
+
+.project-gallery-copy .section-label {
+    margin: 0 0 18px 0;
+}
+
+.project-gallery-copy h2 {
+    margin: 0 0 18px 0;
+}
+
+.project-gallery-copy p {
+    max-width: 720px;
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.85;
+    color: #6f675d;
+}
+
+.project-gallery-note {
+    border-left: 1px solid rgba(58, 77, 36, 0.16);
+    padding-left: 28px;
+    padding-top: 4px;
+    align-self: start;
+}
+
+.project-gallery-note h3 {
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    color: #3a4d24;
+}
+
+.project-gallery-note p {
+    margin: 0;
+    max-width: 260px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    line-height: 1.8;
+    color: #8a8276;
+}
+
+/* Mobile: stack the two columns */
+@media (max-width: 900px) {
+    .project-gallery-intro {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-gallery-note {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 0;
+        border-top: 1px solid rgba(58, 77, 36, 0.12);
+        padding-top: 22px;
+    }
+
+    .project-gallery-note p {
+        max-width: 100%;
+    }
+}
