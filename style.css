@@ -3064,3 +3064,27 @@ body {
 .project-detail-page .project-overview-section {
     margin-bottom: 28px;
 }
+
+/* =========================
+   Felixa project spacing fix
+========================= */
+
+/* Reduce spacing after each project detail section */
+.project-detail-page .section {
+    margin-bottom: 40px;
+}
+
+/* Reduce the extra top padding added before the next section */
+.project-detail-page section + section {
+    padding-top: 32px;
+}
+
+/* Specifically tighten the space after Overview */
+.project-detail-page .project-overview-section {
+    margin-bottom: 32px;
+}
+
+/* Specifically tighten the top spacing of Project Gallery */
+.project-detail-page .project-gallery-section {
+    padding-top: 32px;
+}
