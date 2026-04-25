@@ -3136,7 +3136,8 @@ body {
 .gallery-note span {
     display: block;
     font-family: "Playfair Display", serif;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
     font-style: italic;
     color: #3d4f2f;
     line-height: 1;
