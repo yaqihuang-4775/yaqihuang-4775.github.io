@@ -3441,7 +3441,7 @@ body {
 
 /* 缩窄 PAGES 下面文字的宽度 */
 .project-detail-page .gallery-note p {
-    max-width: 260px !important;
+    max-width: 240px !important;
     margin: 0 !important;
 }
 
