@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felixa Community Health Report | Yaqi Huang</title>
 
+    <!-- Because this page is inside Projects/felixa-report/, we go up two levels to find style.css -->
     <link rel="stylesheet" href="../../style.css">
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Navigation bar -->
     <div class="navbar">
         <a href="../../index.html">Home</a>
         <a href="../../About/index.html">About</a>
@@ -21,6 +24,7 @@
         <a href="../../Contact/index.html">Contact</a>
     </div>
 
+    <!-- Project title area -->
     <header class="project-detail-header">
         <a href="../index.html" class="back-link">← Back to Projects</a>
 
@@ -35,15 +39,19 @@
 
     <div class="resume-divider"></div>
 
-    <main class="project-detail-page">
+    <!-- Add project-floating-bg here to turn on the floating background dots -->
+    <main class="project-detail-page project-floating-bg">
 
+        <!-- Overview section -->
         <section class="section project-overview-section">
             <div class="project-overview-grid">
 
                 <div>
                     <h2>Overview</h2>
                     <p>
-                        This project involved shaping community health information into a visually organized report format. The design focused on clarity, hierarchy, and accessibility so that readers could quickly understand key findings and recommendations.
+                        This project involved shaping community health information into a visually organized report format.
+                        The design focused on clarity, hierarchy, and accessibility so that readers could quickly understand
+                        key findings and recommendations.
                     </p>
                 </div>
 
@@ -57,27 +65,116 @@
             </div>
         </section>
 
+        <!-- Carousel gallery section -->
         <section class="section project-gallery-section">
             <h2>Project Gallery</h2>
 
-            <div class="project-gallery-grid">
-                <img src="../../Assets/Felixa Report/Felixa 1a.png" alt="Felixa Community Health Report page 1">
-                <img src="../../Assets/Felixa Report/Felixa 1b.png" alt="Felixa Community Health Report page 2">
-                <img src="../../Assets/Felixa Report/Felixa 1c.png" alt="Felixa Community Health Report page 3">
+            <div class="project-carousel-wrapper">
+                <button class="carousel-arrow prev" onclick="changeSlide(-1)" aria-label="Previous image">‹</button>
+
+                <div class="project-carousel-main">
+                    <img
+                        id="carousel-main-image"
+                        src="../../Assets/Felixa Report/Felixa 1a.png"
+                        alt="Felixa Community Health Report page 1"
+                    >
+                </div>
+
+                <button class="carousel-arrow next" onclick="changeSlide(1)" aria-label="Next image">›</button>
+            </div>
+
+            <div class="carousel-meta">
+                <p id="carousel-caption">Felixa Community Health Report — Page 1</p>
+                <p id="carousel-counter">1 / 3</p>
+            </div>
+
+            <div class="carousel-thumbnails">
+                <button class="carousel-thumb active" onclick="goToSlide(0)">
+                    <img src="../../Assets/Felixa Report/Felixa 1a.png" alt="Thumbnail page 1">
+                </button>
+
+                <button class="carousel-thumb" onclick="goToSlide(1)">
+                    <img src="../../Assets/Felixa Report/Felixa 1b.png" alt="Thumbnail page 2">
+                </button>
+
+                <button class="carousel-thumb" onclick="goToSlide(2)">
+                    <img src="../../Assets/Felixa Report/Felixa 1c.png" alt="Thumbnail page 3">
+                </button>
             </div>
         </section>
 
+        <!-- Design focus section -->
         <section class="section project-process-section">
             <h2>Design Focus</h2>
 
             <ul>
                 <li>Organized complex information into a clearer visual hierarchy.</li>
-                <li>Used layout and spacing to support readability.</li>
-                <li>Balanced visual appeal with report-style professionalism.</li>
+                <li>Used spacing, contrast, and sectioning to support readability.</li>
+                <li>Balanced visual appeal with a professional report-style structure.</li>
             </ul>
         </section>
 
     </main>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        const carouselImages = [
+            {
+                src: "../../Assets/Felixa Report/Felixa 1a.png",
+                alt: "Felixa Community Health Report page 1",
+                caption: "Felixa Community Health Report — Page 1"
+            },
+            {
+                src: "../../Assets/Felixa Report/Felixa 1b.png",
+                alt: "Felixa Community Health Report page 2",
+                caption: "Felixa Community Health Report — Page 2"
+            },
+            {
+                src: "../../Assets/Felixa Report/Felixa 1c.png",
+                alt: "Felixa Community Health Report page 3",
+                caption: "Felixa Community Health Report — Page 3"
+            }
+        ];
+
+        let currentSlide = 0;
+
+        const mainImage = document.getElementById("carousel-main-image");
+        const caption = document.getElementById("carousel-caption");
+        const counter = document.getElementById("carousel-counter");
+        const thumbs = document.querySelectorAll(".carousel-thumb");
+
+        function updateCarousel() {
+            mainImage.src = carouselImages[currentSlide].src;
+            mainImage.alt = carouselImages[currentSlide].alt;
+            caption.textContent = carouselImages[currentSlide].caption;
+            counter.textContent = `${currentSlide + 1} / ${carouselImages.length}`;
+
+            thumbs.forEach((thumb, index) => {
+                thumb.classList.toggle("active", index === currentSlide);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+
+            if (currentSlide < 0) {
+                currentSlide = carouselImages.length - 1;
+            }
+
+            if (currentSlide >= carouselImages.length) {
+                currentSlide = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        updateCarousel();
+    </script>
 
 </body>
 </html>
