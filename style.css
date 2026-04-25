@@ -3088,3 +3088,19 @@ body {
 .project-detail-page .project-gallery-section {
     padding-top: 24px;
 }
+
+.project-detail-page .project-overview-section {
+    margin-top: 40px !important;
+    margin-bottom: 8px !important;
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+}
+
+.project-detail-page .project-overview-section + .project-gallery-section {
+    margin-top: 0 !important;
+    padding-top: 18px !important;
+}
+
+.project-detail-page .project-gallery-section {
+    margin-top: 0 !important;
+}
