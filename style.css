@@ -2193,156 +2193,30 @@ body.home-page .main-nav a.active::after {
 }
 
 
-/* =========================
-   PROJECT DETAIL PAGES
-========================= */
+/* =========================================================
+   PROJECT DETAIL PAGE — EDITORIAL CASE STUDY STYLE
+   Use this for Felixa and future project detail pages
+========================================================= */
 
-.project-detail-header {
-    text-align: center;
-    max-width: 980px;
-    margin: 76px auto 42px auto;
-    padding: 0 28px;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 30px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #7b7468;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.back-link:hover {
-    color: #3a4d24;
-    border-bottom-color: rgba(58, 77, 36, 0.35);
-}
-
-.project-detail-header h1 {
-    text-align: center;
-    margin: 0 0 34px 0;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.025em;
-    font-size: 58px;
-    line-height: 1.05;
-    color: #3a4d24;
-}
-
-.project-detail-intro {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 15px;
-    line-height: 1.9;
-    color: #7b7468;
-}
-
-.project-detail-page {
-    padding-bottom: 90px;
-}
-
-.project-overview-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.project-overview-grid p {
-    font-size: 15px;
-    line-height: 1.85;
-    color: #7b7468;
-}
-
-.project-meta-card {
-    background: #fcfcfa;
-    border: 1px solid rgba(0, 0, 0, 0.045);
-    border-radius: 24px;
-    padding: 24px;
-}
-
-.project-meta-card p {
-    margin: 0 0 18px 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #7b7468;
-}
-
-.project-meta-card p:last-child {
-    margin-bottom: 0;
-}
-
-.project-meta-card strong {
-    color: #3a4d24;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.project-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    margin-top: 24px;
-}
-
-.project-gallery-grid img {
-    width: 100%;
-    border-radius: 22px;
-    display: block;
-    background: #f4f8ee;
-    box-shadow: 0 10px 28px rgba(30, 30, 30, 0.05);
-}
-
-.project-process-section ul {
-    margin-top: 18px;
-}
-
-@media (max-width: 900px) {
-    .project-detail-header {
-        margin-top: 56px;
-        margin-bottom: 34px;
-        padding: 0 20px;
-    }
-
-    .project-detail-header h1 {
-        font-size: 42px;
-    }
-
-    .project-overview-grid,
-    .project-gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================
-   PROJECT DETAIL CAROUSEL + FLOATING BACKGROUND
-========================= */
-
-/* Prevent horizontal scrolling caused by floating circles */
+/* Prevent sideways scrolling from decorative circles */
 body {
     overflow-x: hidden;
 }
 
-/* Floating background dots */
-.project-floating-bg {
+/* Main project detail page wrapper */
+.project-detail-page {
     position: relative;
     z-index: 1;
 }
 
+/* Floating background accents */
 .project-floating-bg::before {
     content: "";
     position: fixed;
-    width: 300px;
-    height: 300px;
-    right: -90px;
-    top: 180px;
+    width: 320px;
+    height: 320px;
+    right: -110px;
+    top: 170px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(136, 176, 75, 0.18), transparent 68%);
     pointer-events: none;
@@ -2352,21 +2226,93 @@ body {
 .project-floating-bg::after {
     content: "";
     position: fixed;
-    width: 240px;
-    height: 240px;
-    left: -70px;
-    bottom: 80px;
+    width: 250px;
+    height: 250px;
+    left: -80px;
+    bottom: 90px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(210, 191, 140, 0.18), transparent 68%);
     pointer-events: none;
     z-index: -1;
 }
 
-/* Carousel area */
-.project-gallery-section h2 {
-    margin-bottom: 24px;
+/* Make project sections feel open instead of boxed */
+.project-detail-page .section {
+    background: transparent;
+    width: min(1080px, calc(100% - 56px));
+    margin: 0 auto 76px auto;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
+/* Add soft section separation */
+.project-detail-page section + section {
+    border-top: 1px solid rgba(58, 77, 36, 0.1);
+    padding-top: 58px;
+}
+
+/* Overview layout */
+.project-overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+    gap: 56px;
+    align-items: start;
+}
+
+/* Overview text */
+.project-overview-section h2,
+.project-gallery-section h2,
+.project-process-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #3a4d24;
+}
+
+.project-overview-section p {
+    color: #6f675d;
+    line-height: 1.9;
+    font-size: 15.5px;
+}
+
+/* Turn the project meta box into a light sidebar */
+.project-meta-card {
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(58, 77, 36, 0.16);
+    border-radius: 0;
+    padding: 4px 0 4px 28px;
+    box-shadow: none;
+}
+
+/* Each meta item */
+.project-meta-card p {
+    margin: 0 0 22px 0;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #7b7468;
+}
+
+/* Meta labels */
+.project-meta-card strong {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #3a4d24;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* Gallery section slightly wider because it is the visual focus */
+.project-detail-page .project-gallery-section {
+    width: min(1180px, calc(100% - 56px));
+}
+
+/* Carousel wrapper */
 .project-carousel-wrapper {
     display: grid;
     grid-template-columns: 56px 1fr 56px;
@@ -2374,47 +2320,49 @@ body {
     align-items: center;
 }
 
-/* Main display image */
+/* Main carousel visual area */
 .project-carousel-main {
-    background: #fcfcfa;
-    border-radius: 28px;
+    background: #f7f8f3;
+    border-radius: 34px;
     overflow: hidden;
-    box-shadow: 0 16px 38px rgba(30, 30, 30, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    min-height: 420px;
+    box-shadow: 0 22px 54px rgba(30, 30, 30, 0.08);
+    border: none;
+    min-height: 460px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Main image */
 .project-carousel-main img {
     width: 100%;
-    max-height: 72vh;
+    max-height: 74vh;
     object-fit: contain;
     display: block;
-    background: #f7f8f3;
+    background: transparent;
     opacity: 1;
     transition: opacity 0.22s ease;
 }
 
 /* Arrow buttons */
 .carousel-arrow {
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
     border: none;
     border-radius: 50%;
-    background: #eef4e5;
+    background: rgba(238, 244, 229, 0.95);
     color: #3a4d24;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1;
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(30, 30, 30, 0.06);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .carousel-arrow:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
     background: #e3edd6;
+    box-shadow: 0 10px 24px rgba(30, 30, 30, 0.08);
 }
 
 /* Caption and counter */
@@ -2423,8 +2371,8 @@ body {
     justify-content: space-between;
     gap: 16px;
     align-items: center;
-    margin-top: 18px;
-    margin-bottom: 16px;
+    margin-top: 20px;
+    margin-bottom: 18px;
     flex-wrap: wrap;
 }
 
@@ -2437,32 +2385,35 @@ body {
 
 #carousel-counter {
     margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #88b04b;
 }
 
-/* Thumbnails */
+/* Thumbnail row */
 .carousel-thumbnails {
     display: flex;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 8px;
 }
 
+/* Thumbnail buttons — less button-like */
 .carousel-thumb {
-    width: 90px;
-    height: 110px;
+    width: 88px;
+    height: 108px;
     padding: 0;
-    border: 2px solid transparent;
+    border: none;
     border-radius: 18px;
-    overflow: hidden;
-    background: #fcfcfa;
+    overflow: visible;
+    background: transparent;
     cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-    opacity: 0.72;
+    opacity: 0.62;
+    box-shadow: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .carousel-thumb img {
@@ -2470,66 +2421,108 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(30, 30, 30, 0.05);
 }
 
-/* When mouse hovers over thumbnail */
+/* Thumbnail hover */
 .carousel-thumb:hover {
     transform: translateY(-2px);
-    opacity: 1;
+    opacity: 0.9;
 }
 
-/* Current selected thumbnail */
+/* Active thumbnail */
 .carousel-thumb.active {
-    border-color: #88b04b;
     opacity: 1;
-    box-shadow: 0 10px 24px rgba(30, 30, 30, 0.08);
+    transform: translateY(-2px);
 }
 
-/* Mobile version */
+.carousel-thumb.active img {
+    outline: 2px solid #88b04b;
+    outline-offset: 4px;
+    box-shadow: 0 12px 26px rgba(30, 30, 30, 0.08);
+}
+
+/* Design Focus section: open text block instead of another box */
+.project-process-section {
+    max-width: 920px;
+    position: relative;
+    padding-left: 26px !important;
+}
+
+/* Small accent line */
+.project-process-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 62px;
+    width: 3px;
+    height: 46px;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #88b04b, rgba(136, 176, 75, 0.18));
+}
+
+.project-process-section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.project-process-section li {
+    margin-bottom: 12px;
+    line-height: 1.85;
+    color: #6f675d;
+    font-size: 15.5px;
+}
+
+/* Responsive version */
 @media (max-width: 900px) {
+    .project-detail-page .section,
+    .project-detail-page .project-gallery-section {
+        width: min(100% - 36px, 720px);
+        margin-bottom: 58px;
+    }
+
+    .project-detail-page section + section {
+        padding-top: 44px;
+    }
+
+    .project-overview-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .project-meta-card {
+        border-left: none;
+        border-top: 1px solid rgba(58, 77, 36, 0.14);
+        padding: 24px 0 0 0;
+    }
+
     .project-carousel-wrapper {
-        grid-template-columns: 44px 1fr 44px;
+        grid-template-columns: 42px 1fr 42px;
         gap: 10px;
     }
 
     .carousel-arrow {
-        width: 44px;
-        height: 44px;
-        font-size: 26px;
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
     }
 
     .project-carousel-main {
         min-height: 280px;
-        border-radius: 22px;
+        border-radius: 24px;
     }
 
     .carousel-thumb {
         width: 72px;
         height: 90px;
     }
-}
 
-
-/* Mobile */
-
-@media (max-width: 900px) {
-    .featured-projects-grid,
-    .project-mini-grid {
-        grid-template-columns: 1fr;
+    .project-process-section {
+        padding-left: 20px !important;
     }
 
-    .projects-header {
-        margin-top: 56px;
-        margin-bottom: 34px;
-        padding: 0 20px;
-    }
-
-    .projects-header h1 {
-        font-size: 46px;
-        margin-bottom: 26px;
-    }
-
-    .project-card-content {
-        padding: 22px 20px 24px 20px;
+    .project-process-section::before {
+        top: 48px;
     }
 }
