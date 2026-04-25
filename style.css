@@ -3166,3 +3166,59 @@ body {
         padding-left: 1rem;
     }
 }
+
+
+/* =========================
+   Felixa Gallery Heading Alignment Fix
+   Put this at the VERY END of style.css
+========================= */
+
+/* Make overview and gallery heading use the same page width */
+.project-detail-page .project-overview-section,
+.project-detail-page .project-gallery-section {
+    width: min(1080px, calc(100% - 56px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Use the same column structure as the Overview section */
+.gallery-heading-row {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 3rem 0 !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr) !important;
+    gap: 56px !important;
+    align-items: end !important;
+}
+
+/* Left side text should stay editorial and aligned */
+.gallery-heading-main {
+    max-width: 640px;
+}
+
+/* Right side note divider now lines up with the overview divider */
+.gallery-note {
+    max-width: none !important;
+    padding-left: 28px !important;
+    border-left: 1px solid rgba(58, 77, 36, 0.14) !important;
+}
+
+/* Keep mobile layout clean */
+@media (max-width: 900px) {
+    .gallery-heading-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.4rem !important;
+    }
+
+    .gallery-note {
+        border-left: none !important;
+        border-top: 1px solid rgba(58, 77, 36, 0.14) !important;
+        padding-left: 0 !important;
+        padding-top: 1rem !important;
+        width: 100% !important;
+    }
+}
