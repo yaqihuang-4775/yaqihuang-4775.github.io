@@ -3399,3 +3399,71 @@ body {
         max-width: 100%;
     }
 }
+
+
+/* =========================
+   FELIXA GALLERY HEADER — FINAL FIX
+   Put this at the very end of style.css.
+========================= */
+
+.project-detail-page .project-gallery-section {
+    width: var(--project-detail-width, min(1080px, calc(100% - 56px))) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.project-detail-page .gallery-heading-row {
+    display: grid !important;
+    grid-template-columns: var(--project-left-col, minmax(0, 1.35fr)) var(--project-right-col, minmax(220px, 0.65fr)) !important;
+    column-gap: var(--project-col-gap, 56px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 3rem 0 !important;
+}
+
+/* 你的 HTML 里左栏是普通 div，所以这里直接 target first-child */
+.project-detail-page .gallery-heading-row > div:first-child,
+.project-detail-page .gallery-intro {
+    max-width: 680px !important;
+}
+
+/* 重点：用 margin-top 移动整个右侧 note，而不是 padding-top */
+.project-detail-page .gallery-note {
+    align-self: start !important;
+    margin-top: 56px !important;
+    padding-top: 0 !important;
+    padding-left: 28px !important;
+    border-left: 1px solid rgba(58, 77, 36, 0.14) !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* 缩窄 PAGES 下面文字的宽度 */
+.project-detail-page .gallery-note p {
+    max-width: 260px !important;
+    margin: 0 !important;
+}
+
+.project-detail-page .gallery-note span {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+    .project-detail-page .gallery-heading-row {
+        grid-template-columns: 1fr !important;
+        row-gap: 24px !important;
+    }
+
+    .project-detail-page .gallery-note {
+        margin-top: 0 !important;
+        border-left: none !important;
+        border-top: 1px solid rgba(58, 77, 36, 0.14) !important;
+        padding-left: 0 !important;
+        padding-top: 22px !important;
+    }
+
+    .project-detail-page .gallery-note p {
+        max-width: 100% !important;
+    }
+}
