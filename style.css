@@ -3431,7 +3431,7 @@ body {
 /* 重点：用 margin-top 移动整个右侧 note，而不是 padding-top */
 .project-detail-page .gallery-note {
     align-self: start !important;
-    margin-top: 56px !important;
+    margin-top: 64px !important;
     padding-top: 0 !important;
     padding-left: 28px !important;
     border-left: 1px solid rgba(58, 77, 36, 0.14) !important;
