@@ -3222,3 +3222,94 @@ body {
         width: 100% !important;
     }
 }
+
+
+/* =========================
+   FELIXA DETAIL PAGE — FINAL ALIGNMENT POLISH
+   Put this at the VERY END of style.css
+========================= */
+
+:root {
+    --project-detail-width: min(1080px, calc(100% - 56px));
+    --project-left-col: minmax(0, 1.35fr);
+    --project-right-col: minmax(220px, 0.65fr);
+    --project-col-gap: 56px;
+}
+
+/* Make overview and gallery use the exact same outer width */
+.project-detail-page .project-overview-section,
+.project-detail-page .project-gallery-section {
+    width: var(--project-detail-width) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Make overview and gallery heading use the exact same grid math */
+.project-overview-grid,
+.gallery-heading-row {
+    display: grid !important;
+    grid-template-columns: var(--project-left-col) var(--project-right-col) !important;
+    column-gap: var(--project-col-gap) !important;
+    align-items: start !important;
+}
+
+/* Remove old flex behavior from gallery heading */
+.gallery-heading-row {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 3rem 0 !important;
+    justify-content: initial !important;
+}
+
+/* Make the left text block line up visually with overview text */
+.gallery-heading-main,
+.project-overview-grid > div:first-child {
+    max-width: 680px !important;
+}
+
+/* Make the right divider start at the same column boundary */
+.project-meta-card,
+.gallery-note {
+    border-left: 1px solid rgba(58, 77, 36, 0.14) !important;
+    padding-left: 28px !important;
+    margin-left: 0 !important;
+}
+
+/* Remove any width limitation that makes the gallery note look shifted */
+.gallery-note {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Keep gallery paragraph aligned with the heading above */
+.gallery-intro {
+    max-width: 680px !important;
+}
+
+/* Responsive version */
+@media (max-width: 900px) {
+    :root {
+        --project-detail-width: min(100% - 36px, 720px);
+    }
+
+    .project-overview-grid,
+    .gallery-heading-row {
+        grid-template-columns: 1fr !important;
+        row-gap: 28px !important;
+    }
+
+    .project-meta-card,
+    .gallery-note {
+        border-left: none !important;
+        border-top: 1px solid rgba(58, 77, 36, 0.14) !important;
+        padding-left: 0 !important;
+        padding-top: 22px !important;
+    }
+
+    .gallery-heading-main,
+    .project-overview-grid > div:first-child,
+    .gallery-intro {
+        max-width: 100% !important;
+    }
+}
