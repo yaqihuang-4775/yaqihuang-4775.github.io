@@ -3081,10 +3081,10 @@ body {
 
 /* Specifically tighten the space after Overview */
 .project-detail-page .project-overview-section {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 /* Specifically tighten the top spacing of Project Gallery */
 .project-detail-page .project-gallery-section {
-    padding-top: 32px;
+    padding-top: 24px;
 }
