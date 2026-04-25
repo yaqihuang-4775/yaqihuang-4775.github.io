@@ -3056,3 +3056,11 @@ body {
     margin-bottom: 40px !important;
     padding: 24px 0 !important;
 }
+
+.project-overview-section + .project-gallery-section {
+    padding-top: 32px;
+}
+
+.project-detail-page .project-overview-section {
+    margin-bottom: 36px;
+}
