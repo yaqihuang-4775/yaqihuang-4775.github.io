@@ -3467,3 +3467,35 @@ body {
         max-width: 100% !important;
     }
 }
+
+.single-project-gallery {
+    width: min(760px, 82%);
+    margin: 54px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-project-gallery img {
+    width: 100%;
+    max-height: 720px;
+    object-fit: contain;
+    border-radius: 28px;
+    box-shadow: 0 28px 70px rgba(39, 55, 42, 0.12);
+    background: rgba(251, 250, 246, 0.75);
+}
+
+.single-gallery-meta {
+    width: min(760px, 82%);
+    margin: 22px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.single-gallery-meta p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a8178;
+}
