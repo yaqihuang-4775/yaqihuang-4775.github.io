@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Languages Club Posters | Yaqi Huang</title>
+
+    <!-- Because this page is inside Projects/felixa-report/, we go up two levels to find style.css -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="../../index.html">Home</a>
+        <a href="../../About/index.html">About</a>
+        <a href="../../Resume/index.html">Resume</a>
+        <a href="../../Research/index.html">Research</a>
+        <a href="../index.html" class="active">Projects</a>
+        <a href="../../Contact/index.html">Contact</a>
+    </div>
+
+    <!-- Project title area -->
+    <header class="project-detail-header">
+        <a href="../index.html" class="back-link">← Back to Projects</a>
+
+        <h1>World Languages Club Posters</h1>
+
+        <p class="projects-label">POSTER SERIES</p>
+
+        <p class="project-detail-intro">
+            A poster series designed to promote campus events through engaging layouts, strong hierarchy, and cohesive visual identity.
+        </p>
+    </header>
+
+    <div class="resume-divider"></div>
+
+    <!-- Add project-floating-bg here to turn on the floating background dots -->
+    <main class="project-detail-page project-floating-bg">
+
+        <!-- Overview section -->
+        <section class="section project-overview-section">
+            <div class="project-overview-grid">
+
+                <div>
+                    <h2>Overview</h2>
+                    <p>
+                        This series of posters are created to encourage participation in various language tutoring opportunities hosted by a school club.
+                        The design focused on attractiveness, clarity, and content organizationt to outline the requirements, benefits,
+                        and application portal for the activities and programs.
+                    </p>
+                </div>
+
+                <aside class="project-meta-card">
+                    <p><strong>Type</strong><br>Poster Series</p>
+                    <p><strong>Role</strong><br>Visual Design, Layout</p>
+                    <p><strong>Tools</strong><br>Canva</p>
+                    <p><strong>Status</strong><br>Completed</p>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Carousel gallery section -->
+<section class="section project-gallery-section">
+
+    <div class="project-gallery-intro">
+        <div class="project-gallery-copy">
+            <p class="section-label"> RECRUITMENT POSTERS</p>
+            <h2>Project Gallery</h2>
+            <p>
+                A closer look at the final poster layout, including the sectioning, visual design,
+                and content organization.
+            </p>
+        </div>
+
+        <div class="project-gallery-note">
+            <h3>VERSIONS</h3>
+            <p>Scroll through selected versions from the full poster series.</p>
+        </div>
+    </div>
+
+            <div class="project-carousel-wrapper">
+                <button class="carousel-arrow prev" onclick="changeSlide(-1)" aria-label="Previous image">‹</button>
+
+                <div class="project-carousel-main">
+                    <img
+                        id="carousel-main-image"
+                        src="../../Assets/Posters/World Languages Club Poster 2.png"
+                        alt="World Languages Club Posters 1"
+                    >
+                </div>
+
+                <button class="carousel-arrow next" onclick="changeSlide(1)" aria-label="Next image">›</button>
+            </div>
+
+            <div class="carousel-meta">
+                <p id="carousel-caption">Felixa Community Health Report — Page 1</p>
+                <p id="carousel-counter">1 / 3</p>
+            </div>
+
+            <div class="carousel-thumbnails">
+                <button class="carousel-thumb active" onclick="goToSlide(0)">
+                    <img src="../../Assets/Posters/World Languages Club Poster 2.png" alt="Thumbnail page 1">
+                </button>
+
+                <button class="carousel-thumb" onclick="goToSlide(1)">
+                    <img src="../../Assets/Posters/World Languages Club Poster 1.png" alt="Thumbnail page 2">
+                </button>
+
+                <button class="carousel-thumb" onclick="goToSlide(2)">
+                    <img src="../../Assets/Posters/World Languages Club Summer Tutor Poster.png" alt="Thumbnail page 3">
+                </button>
+            </div>
+        </section>
+
+        <!-- Design focus section -->
+        <section class="section project-process-section">
+            <h2>Design Focus</h2>
+
+            <ul>
+                <li>Organized multifaced content into clear visual sections.</li>
+                <li>Used spacing, graphics, and placement to enhance comprehensibility.</li>
+                <li>Applied different colour schemes to encourage action in various target audience groups.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        const carouselImages = [
+            {
+                src: "../../Assets/Posters/World Languages Club Poster 2.png",
+                alt: "World Languages Club Student Recruitment Poster",
+                caption: "World Languages Club — Student Recruitment Poster"
+            },
+            {
+                src: "../../Assets/Posters/World Languages Club Poster 1.png",
+                alt: "World Languages Club Mentor Recruitment Poster",
+                caption: "World Languages Club — Mentor Recruitment Poster"
+            },
+            {
+                src: "../../Assets/Posters/World Languages Club Summer Tutor Poster.png",
+                alt: "World Languages Club Summer Tutor Program Poster",
+                caption: "World Languages Club — Summer Tutor Program Poster"
+            }
+        ];
+
+        let currentSlide = 0;
+
+        const mainImage = document.getElementById("carousel-main-image");
+        const caption = document.getElementById("carousel-caption");
+        const counter = document.getElementById("carousel-counter");
+        const thumbs = document.querySelectorAll(".carousel-thumb");
+
+        function updateCarousel() {
+            mainImage.src = carouselImages[currentSlide].src;
+            mainImage.alt = carouselImages[currentSlide].alt;
+            caption.textContent = carouselImages[currentSlide].caption;
+            counter.textContent = `${currentSlide + 1} / ${carouselImages.length}`;
+
+            thumbs.forEach((thumb, index) => {
+                thumb.classList.toggle("active", index === currentSlide);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+
+            if (currentSlide < 0) {
+                currentSlide = carouselImages.length - 1;
+            }
+
+            if (currentSlide >= carouselImages.length) {
+                currentSlide = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        updateCarousel();
+    </script>
+
+</body>
+</html>
