@@ -3313,3 +3313,71 @@ body {
         max-width: 100% !important;
     }
 }
+
+
+/* =========================
+   Final Felixa Gallery Heading Alignment Fix
+   Put this at the VERY END of style.css
+========================= */
+
+.project-detail-page .project-overview-section,
+.project-detail-page .project-gallery-section {
+    width: min(1080px, calc(100% - 56px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Match the overview column structure exactly */
+.gallery-heading-row {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 3rem 0 !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr) !important;
+    gap: 54px !important;
+
+    /* This is the key fix */
+    align-items: start !important;
+}
+
+/* Make the left text align with the overview paragraph width */
+.gallery-heading-main {
+    max-width: 680px !important;
+}
+
+/* Make right divider align with the overview divider */
+.gallery-note {
+    max-width: none !important;
+    padding-left: 28px !important;
+    border-left: 1px solid rgba(58, 77, 36, 0.14) !important;
+    align-self: start !important;
+}
+
+/* Remove extra weird heading spacing */
+.gallery-heading-row h2 {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+.gallery-intro {
+    max-width: 680px !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .gallery-heading-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.4rem !important;
+    }
+
+    .gallery-note {
+        border-left: none !important;
+        border-top: 1px solid rgba(58, 77, 36, 0.14) !important;
+        padding-left: 0 !important;
+        padding-top: 1rem !important;
+        width: 100% !important;
+    }
+}
