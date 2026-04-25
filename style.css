@@ -3104,3 +3104,64 @@ body {
 .project-detail-page .project-gallery-section {
     margin-top: 0 !important;
 }
+
+
+/* Project gallery heading */
+.gallery-heading-row {
+    max-width: 1080px;
+    margin: 0 auto 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.gallery-heading-row h2 {
+    margin-bottom: 0.7rem;
+}
+
+.gallery-intro {
+    max-width: 560px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #6f695f;
+}
+
+.gallery-note {
+    max-width: 230px;
+    padding-left: 1.2rem;
+    border-left: 1px solid rgba(67, 104, 80, 0.25);
+}
+
+.gallery-note span {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    color: #3d4f2f;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+.gallery-note p {
+    font-size: 0.78rem;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a8378;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .gallery-heading-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.4rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .gallery-note {
+        max-width: 100%;
+        padding-left: 1rem;
+    }
+}
