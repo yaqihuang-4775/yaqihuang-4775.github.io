@@ -4226,3 +4226,468 @@ body {
         padding-right: 20px;
     }
 }
+
+
+
+
+
+
+
+/* =========================
+   RESEARCH PAGE REFINEMENT
+   Add this at the VERY END of style.css
+========================= */
+
+/* Make research page match the clean resume/contact top style */
+.research-header {
+    text-align: center;
+    max-width: 980px;
+    margin: 72px auto 48px auto;
+    padding: 0 28px;
+}
+
+.research-header h1 {
+    margin: 0 0 18px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    font-size: 56px;
+    line-height: 1.05;
+    color: #3a4d24;
+}
+
+.research-name {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #88b04b;
+    margin: 0 0 18px 0;
+}
+
+.research-intro {
+    font-size: 15px;
+    color: #7b7468;
+    margin: 0 auto;
+    line-height: 1.9;
+    max-width: 760px;
+}
+
+/* Research page main spacing */
+.research-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 28px 100px 28px;
+}
+
+/* Remove the ugly outer white section boxes */
+.research-page .section,
+.research-page .research-section,
+.research-page .research-cta-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.research-page .section:hover,
+.research-page .research-section:hover {
+    transform: none;
+}
+
+/* Cleaner section spacing */
+.research-section {
+    padding: 52px 0 64px 0;
+}
+
+.research-section + .research-section {
+    border-top: 1px solid rgba(58, 77, 36, 0.12);
+}
+
+.research-section-heading {
+    margin-bottom: 34px;
+}
+
+/* Section label */
+.section-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #88b04b;
+    margin: 0 0 10px 0;
+}
+
+/* Section title */
+.research-section-heading h2,
+.research-subsection-heading h2,
+.research-cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #3a4d24;
+}
+
+.research-section-heading h2 {
+    margin: 0 0 14px 0;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.section-description {
+    max-width: 760px;
+    margin: 0;
+    color: #7b7468;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Research output cards stay as designed cards */
+.research-output-card {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: center;
+    background: rgba(251, 249, 243, 0.78);
+    border: 1px solid rgba(58, 77, 36, 0.1);
+    border-radius: 28px;
+    padding: 28px;
+    margin-bottom: 34px;
+    box-shadow: 0 18px 42px rgba(58, 77, 36, 0.06);
+}
+
+/* Control image frame */
+.research-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #edf3e3, #e8e1d2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This is the important part that stops real images from becoming huge */
+.research-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Add a soft background behind images that do not fill the frame */
+.research-output-image {
+    min-width: 0;
+}
+
+/* Text side */
+.research-output-content h3 {
+    margin: 8px 0 14px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 1.15;
+    color: #3a4d24;
+}
+
+.output-type,
+.writing-status,
+.journey-date {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #88b04b;
+}
+
+.output-meta {
+    margin: 0 0 10px 0;
+    color: #7b7468;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.output-highlight {
+    margin: 12px 0 14px 0;
+    color: #5f7c31;
+    font-weight: 700;
+}
+
+.research-output-content p {
+    line-height: 1.85;
+    color: #6f6a61;
+}
+
+/* Writing cards */
+.research-writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.writing-card,
+.interest-card {
+    background: rgba(251, 249, 243, 0.78);
+    border: 1px solid rgba(58, 77, 36, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 12px 30px rgba(58, 77, 36, 0.045);
+}
+
+/* =========================
+   CURVED RESEARCH TIMELINE
+========================= */
+
+.research-journey-section {
+    position: relative;
+}
+
+/* Timeline container */
+.journey-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 18px auto 0 auto;
+    padding: 34px 0 40px 0;
+}
+
+/* Turn off old straight vertical line */
+.journey-timeline::before {
+    display: none;
+}
+
+/* Curved S-shaped line */
+.journey-curve {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 150px;
+    height: calc(100% - 120px);
+    transform: translateX(-50%);
+    overflow: visible;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.journey-curve path {
+    fill: none;
+    stroke: rgba(136, 176, 75, 0.45);
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+/* Timeline items sit above curve */
+.journey-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.journey-item.left {
+    left: 0;
+    padding-right: 72px;
+}
+
+.journey-item.right {
+    left: 50%;
+    padding-left: 72px;
+}
+
+/* Dots */
+.journey-dot {
+    position: absolute;
+    top: 30px;
+    width: 17px;
+    height: 17px;
+    background: #88b04b;
+    border: 4px solid #f6f1e8;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 0 6px rgba(136, 176, 75, 0.13);
+}
+
+.journey-item.left .journey-dot {
+    right: -8px;
+}
+
+.journey-item.right .journey-dot {
+    left: -8px;
+}
+
+/* Timeline cards */
+.journey-card {
+    background: rgba(251, 249, 243, 0.82);
+    border: 1px solid rgba(58, 77, 36, 0.1);
+    border-radius: 24px;
+    padding: 23px 24px 22px 24px;
+    box-shadow: 0 16px 38px rgba(58, 77, 36, 0.06);
+    backdrop-filter: blur(8px);
+}
+
+.journey-card h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.15;
+    color: #3a4d24;
+}
+
+.journey-card p {
+    margin: 0;
+    color: #6f6a61;
+    line-height: 1.8;
+}
+
+.journey-date {
+    margin: 0 0 10px 0;
+}
+
+/* Ending arrow */
+.journey-end {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+    z-index: 2;
+}
+
+.journey-arrow {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 24px solid #88b04b;
+    margin: 0 auto 18px auto;
+}
+
+.journey-end p {
+    margin: 0 auto;
+    max-width: 520px;
+    color: #6f6a61;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Interest section */
+.research-interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 26px;
+}
+
+.interest-card h3 {
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    color: #3a4d24;
+}
+
+.interest-card p {
+    margin: 0;
+    color: #6f6a61;
+    line-height: 1.8;
+}
+
+/* CTA section */
+.research-cta-section {
+    text-align: center;
+    padding: 56px 0 20px 0;
+    border-top: 1px solid rgba(58, 77, 36, 0.12);
+}
+
+.research-cta-section h2 {
+    margin: 0 0 16px 0;
+    font-size: 40px;
+}
+
+.research-cta-section p {
+    max-width: 680px;
+    margin: 0 auto 24px auto;
+    color: #6f6a61;
+    line-height: 1.85;
+}
+
+.research-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .research-output-card,
+    .research-writing-grid,
+    .research-interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-output-card {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 860px) {
+    .journey-curve {
+        left: 16px;
+        width: 90px;
+        transform: none;
+    }
+
+    .journey-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 54px !important;
+        padding-right: 0 !important;
+    }
+
+    .journey-item.left .journey-dot,
+    .journey-item.right .journey-dot {
+        left: 7px;
+        right: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .research-header {
+        margin-top: 64px;
+        margin-bottom: 38px;
+    }
+
+    .research-header h1 {
+        font-size: 44px;
+    }
+
+    .research-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .research-section-heading h2,
+    .research-cta-section h2 {
+        font-size: 32px;
+    }
+
+    .research-output-content h3,
+    .journey-card h3,
+    .interest-card h3 {
+        font-size: 22px;
+    }
+
+    .research-output-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+}
