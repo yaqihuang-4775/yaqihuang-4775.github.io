@@ -1431,7 +1431,7 @@ body.home-page .main-nav a.active::after {
 
 .section-description {
     margin: 0;
-    max-width: 700px;
+    max-width: 1000px;
     color: #7b7468;
     line-height: 1.8;
 }
