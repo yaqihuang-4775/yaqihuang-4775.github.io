@@ -3793,7 +3793,7 @@ body {
 }
 
 .section-description {
-    max-width: 760px;
+    max-width: 1000px;
     margin: 0;
     color: #7b7468;
     line-height: 1.8;
@@ -4093,7 +4093,7 @@ body {
 }
 
 .section-description {
-    max-width: 760px;
+    max-width: 1000px;
     margin: 0;
     color: #7b7468;
     line-height: 1.8;
