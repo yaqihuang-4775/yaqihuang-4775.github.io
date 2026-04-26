@@ -3647,3 +3647,31 @@ body {
     border: 0;
     display: block;
 }
+
+
+
+
+/* =========================
+   HOME SELECTED WORKS IMAGE FIX
+========================= */
+
+.work-card .project-image-placeholder,
+.work-card .work-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #eef3e7, #e2dccb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-card .project-image-placeholder img,
+.work-card .work-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
