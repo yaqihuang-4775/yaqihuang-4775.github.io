@@ -55,45 +55,6 @@ body {
     background-color: #d7e3cf;
 }
 
-/* =========================
-   Shared Page Header
-========================= */
-
-.page-header {
-    max-width: 980px;
-    margin: 72px auto 42px auto;
-    padding: 0 28px 34px;
-    border-bottom: 1px solid rgba(116, 129, 91, 0.22);
-}
-
-.page-kicker {
-    margin: 0 0 16px 0;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #88b04b;
-}
-
-.page-header h1 {
-    margin: 0 0 22px 0;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 56px;
-    line-height: 1.05;
-    color: #3a4d24;
-}
-
-.page-subtitle {
-    max-width: 760px;
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.9;
-    color: #7b7468;
-}
-
 
 /* Main title */
 h1 {
@@ -1811,7 +1772,44 @@ body.home-page .main-nav a.active::after {
 }
 
 
+/* =========================
+   ABOUT & RESEARCH PAGE HEADERS
+========================= */
+.page-header {
+    text-align: center;
+    max-width: 980px;
+    margin: 88px auto 42px auto;
+    padding: 0 28px;
+}
 
+.page-header h1 {
+    text-align: center;
+    margin: 0 0 34px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-size: 64px;
+    line-height: 1.02;
+    color: #3a4d24;
+}
+
+.page-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #88b04b;
+    margin: 0 0 18px 0;
+}
+
+.page-intro {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #7b7468;
+}
 
 
 
