@@ -1597,7 +1597,7 @@ body.home-page .main-nav a.active::after {
     gap: 16px;
 }
 
-.category-card {
+.category-pill {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1615,7 +1615,7 @@ body.home-page .main-nav a.active::after {
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.category-card:hover {
+.category-pill:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(62, 52, 37, 0.06);
     border-color: rgba(136, 176, 75, 0.18);
