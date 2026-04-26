@@ -642,7 +642,7 @@ summary::before {
     color: #88b04b;
     flex-shrink: 0;
     transition: transform 0.2s ease;
-    transform: translateY(-3px);
+    transform: translateY(-2.4px);
 }
 
 details[open] summary::before {
