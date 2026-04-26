@@ -4943,3 +4943,79 @@ body {
         margin-left: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   Featured Project Page Navigation
+   ============================== */
+
+.project-pagination {
+    max-width: 1080px;
+    margin: 100px auto 0;
+    padding: 38px 0 20px;
+    border-top: 1px solid rgba(63, 90, 42, 0.16);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+}
+
+.project-pagination-link {
+    text-decoration: none;
+    color: #6f6a61;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.project-pagination-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.82;
+}
+
+.project-pagination-link.next {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.pagination-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #8cab47;
+    font-weight: 700;
+}
+
+.pagination-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.65rem;
+    line-height: 1.18;
+    font-style: italic;
+    color: #3f5a2a;
+}
+
+@media (max-width: 700px) {
+    .project-pagination {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 72px;
+    }
+
+    .project-pagination-link.next {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .pagination-title {
+        font-size: 1.4rem;
+    }
+}
