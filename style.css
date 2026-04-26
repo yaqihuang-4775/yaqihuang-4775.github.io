@@ -4986,7 +4986,7 @@ body {
 .about-preview-visual {
     width: 100%;
     max-width: 420px;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
     border-radius: 28px;
     overflow: hidden;
 }
