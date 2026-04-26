@@ -3675,3 +3675,27 @@ body {
     object-position: center;
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#posters,
+#editorial,
+#reports,
+#infographics,
+#social-media,
+#video,
+#logos {
+    scroll-margin-top: 110px;
+}
