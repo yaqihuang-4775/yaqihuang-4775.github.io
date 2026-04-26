@@ -3689,7 +3689,7 @@ body {
 
 
 
-
+#selected-works,
 #posters,
 #editorial,
 #reports,
@@ -3697,5 +3697,5 @@ body {
 #social-media,
 #video,
 #logos {
-    scroll-margin-top: 110px;
+    scroll-margin-top: 80px;
 }
