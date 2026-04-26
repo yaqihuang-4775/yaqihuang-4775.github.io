@@ -5246,7 +5246,6 @@ body {
     border-right: 14px solid transparent;
     border-top: 24px solid #88b04b;
     position: relative;
-    top: -1px; /* 让箭头更贴合线尾 */
 }
 
 .research-page .journey-end p {
