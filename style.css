@@ -3699,3 +3699,530 @@ body {
 #logos {
     scroll-margin-top: 80px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   RESEARCH PAGE
+========================= */
+
+.research-header {
+    text-align: center;
+    max-width: 980px;
+    margin: 84px auto 40px auto;
+    padding: 0 28px;
+}
+
+.research-header h1 {
+    margin: 0 0 24px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    font-size: 56px;
+    line-height: 1.05;
+    color: #3a4d24;
+}
+
+.research-name {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #88b04b;
+    margin: 0 0 16px 0;
+}
+
+.research-intro {
+    font-size: 15px;
+    color: #7b7468;
+    margin: 0 auto;
+    line-height: 1.9;
+    max-width: 760px;
+}
+
+.research-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 28px 100px 28px;
+}
+
+.research-section {
+    padding: 48px 0 56px 0;
+}
+
+.research-section-heading {
+    margin-bottom: 34px;
+}
+
+.section-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #88b04b;
+    margin: 0 0 10px 0;
+}
+
+.research-section-heading h2 {
+    margin: 0 0 14px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #3a4d24;
+}
+
+.section-description {
+    max-width: 760px;
+    margin: 0;
+    color: #7b7468;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* output cards */
+.research-output-card {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: center;
+    background: #fbf9f3;
+    border: 1px solid rgba(58, 77, 36, 0.08);
+    border-radius: 26px;
+    padding: 28px;
+    margin-bottom: 34px;
+}
+
+.research-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #edf3e3, #e8e1d2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6f7860;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.research-output-content h3 {
+    margin: 8px 0 14px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 1.15;
+    color: #3a4d24;
+}
+
+.output-type {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #88b04b;
+}
+
+.output-meta {
+    margin: 0 0 10px 0;
+    color: #7b7468;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.output-highlight {
+    margin: 12px 0 14px 0;
+    color: #5f7c31;
+    font-weight: 700;
+}
+
+.research-output-content p:last-of-type {
+    line-height: 1.85;
+    color: #6f6a61;
+}
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 20px 0;
+}
+
+.research-tags span,
+.research-skill-tags span {
+    background: #eef3e5;
+    color: #4f6136;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* buttons */
+.research-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #3a4d24;
+    color: #fbf9f3;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.research-button:hover {
+    background: #4a6130;
+    transform: translateY(-1px);
+}
+
+.secondary-button {
+    background: transparent;
+    color: #3a4d24;
+    border: 1px solid rgba(58, 77, 36, 0.18);
+}
+
+.secondary-button:hover {
+    background: #eef3e5;
+}
+
+.disabled-button {
+    background: #d8ddd0;
+    color: #6f6a61;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* subsection */
+.research-subsection {
+    margin-top: 48px;
+}
+
+.research-subsection-heading {
+    margin-bottom: 24px;
+}
+
+.research-subsection-heading h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    color: #3a4d24;
+}
+
+.research-writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.writing-card {
+    background: #fbf9f3;
+    border: 1px solid rgba(58, 77, 36, 0.08);
+    border-radius: 22px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.writing-status {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #88b04b;
+}
+
+.writing-card h3 {
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #3a4d24;
+}
+
+.writing-meta {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: #8a8479;
+    line-height: 1.7;
+}
+
+.writing-card p {
+    color: #6f6a61;
+    line-height: 1.8;
+}
+
+.writing-card .research-button,
+.writing-card .disabled-button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* timeline */
+.research-journey-section {
+    position: relative;
+}
+
+.journey-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 10px auto 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: calc(100% - 110px);
+    background: linear-gradient(to bottom, #dbe6c8, #b6c89a, #dbe6c8);
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+
+.journey-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 34px;
+}
+
+.journey-item.left {
+    left: 0;
+    padding-right: 48px;
+}
+
+.journey-item.right {
+    left: 50%;
+    padding-left: 48px;
+}
+
+.journey-dot {
+    position: absolute;
+    top: 28px;
+    width: 18px;
+    height: 18px;
+    background: #88b04b;
+    border: 4px solid #f6f1e8;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 3px rgba(136, 176, 75, 0.15);
+}
+
+.journey-item.left .journey-dot {
+    right: -9px;
+}
+
+.journey-item.right .journey-dot {
+    left: -9px;
+}
+
+.journey-card {
+    background: #fbf9f3;
+    border: 1px solid rgba(58, 77, 36, 0.08);
+    border-radius: 22px;
+    padding: 22px 22px 20px 22px;
+    box-shadow: 0 12px 28px rgba(58, 77, 36, 0.04);
+}
+
+.journey-date {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #88b04b;
+}
+
+.journey-card h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.15;
+    color: #3a4d24;
+}
+
+.journey-card p {
+    margin: 0;
+    color: #6f6a61;
+    line-height: 1.8;
+}
+
+.journey-end {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.journey-arrow {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 24px solid #88b04b;
+    margin: 0 auto 18px auto;
+}
+
+.journey-end p {
+    margin: 0;
+    color: #6f6a61;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* interests */
+.research-interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 26px;
+}
+
+.interest-card {
+    background: #fbf9f3;
+    border: 1px solid rgba(58, 77, 36, 0.08);
+    border-radius: 22px;
+    padding: 24px;
+}
+
+.interest-card h3 {
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    color: #3a4d24;
+}
+
+.interest-card p {
+    margin: 0;
+    color: #6f6a61;
+    line-height: 1.8;
+}
+
+.research-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* CTA */
+.research-cta-section {
+    text-align: center;
+    padding-top: 54px;
+}
+
+.research-cta-section h2 {
+    margin: 0 0 16px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    color: #3a4d24;
+}
+
+.research-cta-section p {
+    max-width: 680px;
+    margin: 0 auto 24px auto;
+    color: #6f6a61;
+    line-height: 1.85;
+}
+
+.research-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* responsive */
+@media (max-width: 950px) {
+    .research-output-card,
+    .research-writing-grid,
+    .research-interest-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 860px) {
+    .journey-timeline::before {
+        left: 16px;
+        transform: none;
+    }
+
+    .journey-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 48px !important;
+        padding-right: 0 !important;
+    }
+
+    .journey-item.left .journey-dot,
+    .journey-item.right .journey-dot {
+        left: 7px;
+        right: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .research-header {
+        margin-top: 70px;
+    }
+
+    .research-header h1 {
+        font-size: 44px;
+    }
+
+    .research-section-heading h2,
+    .research-cta-section h2 {
+        font-size: 32px;
+    }
+
+    .research-subsection-heading h2 {
+        font-size: 28px;
+    }
+
+    .research-output-content h3,
+    .journey-card h3,
+    .interest-card h3 {
+        font-size: 22px;
+    }
+
+    .research-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
